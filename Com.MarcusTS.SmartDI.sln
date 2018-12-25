@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDI", "Com.MarcusTS.SmartDI.csproj", "{A91B975F-0E1E-4C44-AB08-77C2DB0CFD8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A91B975F-0E1E-4C44-AB08-77C2DB0CFD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91B975F-0E1E-4C44-AB08-77C2DB0CFD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91B975F-0E1E-4C44-AB08-77C2DB0CFD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91B975F-0E1E-4C44-AB08-77C2DB0CFD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0D1F592-0E76-454B-AF33-B4BBD6F053B6}
+	EndGlobalSection
+EndGlobal

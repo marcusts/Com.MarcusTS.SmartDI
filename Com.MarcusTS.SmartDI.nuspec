@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Com.MarcusTS.SmartDI</id>
+    <version>1.0.7</version>
+    <title>Smart DI Container</title>
+    <authors>Stephen Marcus</authors>
+    <owners>Marcus Technical Services, Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+     <license type="file">license.txt</license>
+     <description>
+       A container that creates and then (optionally) stores variables to provide caching and centralized access.
+
+       These sorts of containers are sometimes mis-described as IOC ("Inversion of Control") Containers. Since they do not provide any control over program flow, the accurate term is DI ("Dependency Injection") Container.
+
+       The SmartDI Container is unique in that it:
+
+       * Does not store instantiated objects unnecessarily.
+
+       * Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to implement an interface.
+
+       * Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.
+    </description>
+    <copyright>Copyright 2018 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
+    <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
+  </metadata>
+</package>
