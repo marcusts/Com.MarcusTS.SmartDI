@@ -1,0 +1,13 @@
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.chm
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.nuspec
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.xml
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\license.txt
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.deps.json
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.dll
+D:\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.pdb
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.csproj.CoreCompileInputs.cache
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.AssemblyInfoInputs.cache
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.AssemblyInfo.cs
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.dll
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.pdb
+D:\Dev\MtsShared\SmartDI\obj\Debug\netstandard2.0\Com.MarcusTS.SmartDI.csprojAssemblyReference.cache

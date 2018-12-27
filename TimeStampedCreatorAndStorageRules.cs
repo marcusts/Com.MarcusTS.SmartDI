@@ -2,7 +2,7 @@
 // Assembly         : Com.MarcusTS.SmartDI
 // Author           : Stephen Marcus (Marcus Technical Services, Inc.)
 // Created          : 12-21-2018
-// Last Modified On : 12-24-2018
+// Last Modified On : 12-26-2018
 //
 // <copyright file="TimeStampedCreatorAndStorageRules.cs" company="Marcus Technical Services, Inc.">
 //     @2018 Marcus Technical Services, Inc.
@@ -35,20 +35,20 @@ namespace Com.MarcusTS.SmartDI
    using System.Collections.Generic;
 
    /// <summary>
-   /// Interface ITimeStampedCreatorAndStorageRules
+   ///    Interface ITimeStampedCreatorAndStorageRules
    /// </summary>
    public interface ITimeStampedCreatorAndStorageRules
    {
       #region Public Properties
 
       /// <summary>
-      /// Gets or sets the creators and storage rules.
+      ///    Gets or sets the creators and storage rules.
       /// </summary>
       /// <value>The creators and storage rules.</value>
       IDictionary<Type, IProvideCreatorAndStorageRule> CreatorsAndStorageRules { get; set; }
 
       /// <summary>
-      /// Gets or sets the when added.
+      ///    Gets or sets the when added.
       /// </summary>
       /// <value>The when added.</value>
       DateTime WhenAdded { get; set; }
@@ -57,9 +57,9 @@ namespace Com.MarcusTS.SmartDI
    }
 
    /// <summary>
-   /// Class TimeStampedCreatorAndStorageRules.
-   /// Implements the <see cref="ITimeStampedCreatorAndStorageRules" />
-   /// Implements the <see cref="Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules" />
+   ///    Class TimeStampedCreatorAndStorageRules.
+   ///    Implements the <see cref="ITimeStampedCreatorAndStorageRules" />
+   ///    Implements the <see cref="Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules" />
    /// <seealso cref="ITimeStampedCreatorAndStorageRules" />
@@ -68,13 +68,13 @@ namespace Com.MarcusTS.SmartDI
       #region Public Properties
 
       /// <summary>
-      /// Gets or sets the creators and storage rules.
+      ///    Gets or sets the creators and storage rules.
       /// </summary>
       /// <value>The creators and storage rules.</value>
       public IDictionary<Type, IProvideCreatorAndStorageRule> CreatorsAndStorageRules { get; set; }
 
       /// <summary>
-      /// Gets or sets the when added.
+      ///    Gets or sets the when added.
       /// </summary>
       /// <value>The when added.</value>
       public DateTime WhenAdded { get; set; }
