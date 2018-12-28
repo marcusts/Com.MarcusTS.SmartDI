@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Com.MarcusTS.SmartDI</id>
-    <version>1.0.9</version>
+    <version>1.0.10</version>
     <title>Smart DI Container</title>
     <authors>Stephen Marcus</authors>
     <owners>Marcus Technical Services, Inc.</owners>

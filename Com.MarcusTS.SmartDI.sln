@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDI", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDI.MSTests", "..\SmartDI.MSTests\Com.MarcusTS.SmartDI.MSTests\Com.MarcusTS.SmartDI.MSTests.csproj", "{F0DB1C3C-0D16-4C4D-9FCE-DAEAFFAEF022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Android", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp.Android\Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Android.csproj", "{7E9E9B8A-7C2A-4464-B0ED-3FF1A694185C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Android", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp.Android\Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Android.csproj", "{7E9E9B8A-7C2A-4464-B0ED-3FF1A694185C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.iOS", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp.iOS\Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.iOS.csproj", "{BA0EC609-95DD-4E1A-8AF8-F68DFD2BC8FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.iOS", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp.iOS\Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.iOS.csproj", "{BA0EC609-95DD-4E1A-8AF8-F68DFD2BC8FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDi.LifecycleAware.SampleApp", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp\Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.csproj", "{4A187DB5-5F93-4630-AD17-4CCBF86E1D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDI.LifecycleAware.SampleApp", "..\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp\Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.csproj", "{4A187DB5-5F93-4630-AD17-4CCBF86E1D81}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.MarcusTS.SmartDI.LifecycleAware", "..\SmartDI.LifecycleAware\Com.MarcusTS.SmartDI.LifecycleAware.csproj", "{34A1BC50-F946-4DDC-83B9-83FA77647354}"
 EndProject

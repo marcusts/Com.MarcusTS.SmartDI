@@ -2,7 +2,7 @@
 // Assembly         : Com.MarcusTS.SmartDI
 // Author           : Stephen Marcus (Marcus Technical Services, Inc.)
 // Created          : 05-20-2018
-// Last Modified On : 12-26-2018
+// Last Modified On : 12-27-2018
 //
 // <copyright file="ConflictResolution.cs" company="Marcus Technical Services, Inc.">
 //     @2018 Marcus Technical Services, Inc.
@@ -35,20 +35,20 @@ namespace Com.MarcusTS.SmartDI
    using System.Collections.Generic;
 
    /// <summary>
-   ///    Interface IConflictResolution
+   /// Interface IConflictResolution
    /// </summary>
    public interface IConflictResolution
    {
       #region Public Properties
 
       /// <summary>
-      ///    Gets or sets the type of the master.
+      /// Gets or sets the type of the master.
       /// </summary>
       /// <value>The type of the master.</value>
       Type MasterType { get; set; }
 
       /// <summary>
-      ///    Gets or sets the type to cast with storage rule.
+      /// Gets or sets the type to cast with storage rule.
       /// </summary>
       /// <value>The type to cast with storage rule.</value>
       KeyValuePair<Type, IProvideCreatorAndStorageRule> TypeToCastWithStorageRule { get; set; }
@@ -57,9 +57,9 @@ namespace Com.MarcusTS.SmartDI
    }
 
    /// <summary>
-   ///    Class ConflictResolution.
-   ///    Implements the <see cref="IConflictResolution" />
-   ///    Implements the <see cref="Com.MarcusTS.SmartDI.IConflictResolution" />
+   /// Class ConflictResolution.
+   /// Implements the <see cref="IConflictResolution" />
+   /// Implements the <see cref="Com.MarcusTS.SmartDI.IConflictResolution" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.IConflictResolution" />
    /// <seealso cref="IConflictResolution" />
@@ -68,13 +68,13 @@ namespace Com.MarcusTS.SmartDI
       #region Public Properties
 
       /// <summary>
-      ///    Gets or sets the type of the master.
+      /// Gets or sets the type of the master.
       /// </summary>
       /// <value>The type of the master.</value>
       public Type MasterType { get; set; }
 
       /// <summary>
-      ///    Gets or sets the type to cast with storage rule.
+      /// Gets or sets the type to cast with storage rule.
       /// </summary>
       /// <value>The type to cast with storage rule.</value>
       public KeyValuePair<Type, IProvideCreatorAndStorageRule> TypeToCastWithStorageRule { get; set; }
