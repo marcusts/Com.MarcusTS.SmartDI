@@ -2,7 +2,7 @@
 // Assembly         : Com.MarcusTS.SmartDI
 // Author           : Stephen Marcus (Marcus Technical Services, Inc.)
 // Created          : 05-05-2018
-// Last Modified On : 12-27-2018
+// Last Modified On : 01-06-2019
 //
 // <copyright file="SmartDIContainer.cs" company="Marcus Technical Services, Inc.">
 //     @2018 Marcus Technical Services, Inc.
@@ -39,7 +39,10 @@ namespace Com.MarcusTS.SmartDI
    using SharedUtils.Utils;
 
    /// <summary>
-   /// Enum StorageRules
+   ///    Enum StorageRules
+   /// </summary>
+   /// <summary>
+   ///    Enum StorageRules
    /// </summary>
    public enum StorageRules
    {
@@ -47,23 +50,20 @@ namespace Com.MarcusTS.SmartDI
       ///    Default for class management; instantiates but does not store.
       /// </summary>
       /// <summary>
-      /// Any access level
+      ///    Any access level
+      /// </summary>
+      /// <summary>
+      ///    Any access level
       /// </summary>
       AnyAccessLevel,
 
       /// <summary>
       ///    Requires one or more companion "parents"; once all shared parents are gone, the stored instance is removed.
       /// </summary>
-      /// <summary>
-      /// The shared dependency between instances
-      /// </summary>
       SharedDependencyBetweenInstances,
 
       /// <summary>
       ///    Is stored once requested, and thereafter remains in memory for the life of the container.
-      /// </summary>
-      /// <summary>
-      /// The global singleton
       /// </summary>
       GlobalSingleton,
 
@@ -74,9 +74,6 @@ namespace Com.MarcusTS.SmartDI
       ///    In this case, the resolver *must* ask for DoNotStore as the requested access level.
       ///    Use this access level if you are 100% certain that you never want to store the type as registered.
       /// </summary>
-      /// <summary>
-      /// The do not store
-      /// </summary>
       DoNotStore
    }
 
@@ -86,10 +83,6 @@ namespace Com.MarcusTS.SmartDI
    /// </summary>
    /// <seealso cref="System.IDisposable" />
    /// <seealso cref="System.IDisposable" />
-   /// <summary>
-   /// Interface ISmartDIContainer
-   /// Implements the <see cref="System.IDisposable" />
-   /// </summary>
    /// <seealso cref="System.IDisposable" />
    public interface ISmartDIContainer : IDisposable
    {
@@ -102,10 +95,6 @@ namespace Com.MarcusTS.SmartDI
       ///    this step is skipped, none of the lifecycle protections will occur!
       /// </summary>
       /// <param name="containerObj">The container object.</param>
-      /// <summary>
-      /// Containers the object is disappearing.
-      /// </summary>
-      /// <param name="containerObj">The container object.</param>
       void ContainerObjectIsDisappearing(object containerObj);
 
       /// <summary>
@@ -114,11 +103,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
-      /// <summary>
-      /// Qualifyings the registrations exist.
-      /// </summary>
-      /// <typeparam name="T"></typeparam>
-      /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
       bool QualifyingRegistrationsExist<T>();
 
       /// <summary>
@@ -127,11 +111,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <param name="type">The class type that would be instantiated by the qualifying registration.</param>
       /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
-      /// <summary>
-      /// Qualifyings the registrations exist.
-      /// </summary>
-      /// <param name="type">The type.</param>
-      /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
       bool QualifyingRegistrationsExist(Type type);
 
       /// <summary>
@@ -139,11 +118,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <param name="classT">The class type that owns the contracts.</param>
       /// <param name="creatorsAndRules">The list of class creators and rules. The creators can be null.</param>
-      /// <summary>
-      /// Registers the type contracts.
-      /// </summary>
-      /// <param name="classT">The class t.</param>
-      /// <param name="creatorsAndRules">The creators and rules.</param>
       void RegisterTypeContracts(Type                                             classT,
                                  IDictionary<Type, IProvideCreatorAndStorageRule> creatorsAndRules);
 
@@ -173,14 +147,6 @@ namespace Com.MarcusTS.SmartDI
       ///    cannot see a single legal choice, we will throw an error.
       /// </param>
       /// <returns>An object which *must* then be cast as the type requested by the *caller*.</returns>
-      /// <summary>
-      /// Resolves the specified type requested t.
-      /// </summary>
-      /// <param name="typeRequestedT">The type requested t.</param>
-      /// <param name="storageRule">The storage rule.</param>
-      /// <param name="boundInstance">The bound instance.</param>
-      /// <param name="conflictResolver">The conflict resolver.</param>
-      /// <returns>System.Object.</returns>
       object Resolve(Type         typeRequestedT,
                      StorageRules storageRule   = StorageRules.AnyAccessLevel,
                      object       boundInstance = null,
@@ -193,11 +159,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <typeparam name="TParent">The generic parent type</typeparam>
       /// <param name="typesToUnregister">The types to remove.</param>
-      /// <summary>
-      /// Unregisters the type contracts.
-      /// </summary>
-      /// <typeparam name="TParent">The type of the t parent.</typeparam>
-      /// <param name="typesToUnregister">The types to unregister.</param>
       void UnregisterTypeContracts<TParent>(params Type[] typesToUnregister);
 
       #endregion Public Methods
@@ -211,10 +172,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    /// <seealso cref="ISmartDIContainer" />
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
-   /// <summary>
-   /// Class SmartDIContainer.
-   /// Implements the <see cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
-   /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    public class SmartDIContainer : ISmartDIContainer
    {
@@ -231,11 +188,6 @@ namespace Com.MarcusTS.SmartDI
       ///    if set to <c>true</c> [throw on attempt to assign
       ///    duplicate contract sub type].
       /// </param>
-      /// <summary>
-      /// Initializes a new instance of the <see cref="SmartDIContainer"/> class.
-      /// </summary>
-      /// <param name="throwOnMultipleRegisteredTypesForOneResolvedType">if set to <c>true</c> [throw on multiple registered types for one resolved type].</param>
-      /// <param name="throwOnAttemptToAssignDuplicateContractSubType">if set to <c>true</c> [throw on attempt to assign duplicate contract sub type].</param>
       public SmartDIContainer(bool throwOnMultipleRegisteredTypesForOneResolvedType = false,
                               bool throwOnAttemptToAssignDuplicateContractSubType   = false)
       {
@@ -250,9 +202,6 @@ namespace Com.MarcusTS.SmartDI
       /// <summary>
       ///    Finalizes an instance of the <see cref="SmartDIContainer" /> class.
       /// </summary>
-      /// <summary>
-      /// Finalizes an instance of the <see cref="SmartDIContainer"/> class.
-      /// </summary>
       ~SmartDIContainer()
       {
          Dispose(false);
@@ -265,17 +214,11 @@ namespace Com.MarcusTS.SmartDI
       /// <summary>
       ///    A dictionary of global singletons keyed by type. There can only be one each of a given type.
       /// </summary>
-      /// <summary>
-      /// The global singletons by type
-      /// </summary>
       protected readonly IDictionary<Type, object> _globalSingletonsByType = new ConcurrentDictionary<Type, object>();
 
       /// <summary>
       ///    Specifies that a type can be resolved as a specific type (can be different as long as
       ///    related) Also sets the storage rules. Defaults to "all".
-      /// </summary>
-      /// <summary>
-      /// The registered type contracts
       /// </summary>
       protected readonly IDictionary<Type, ITimeStampedCreatorAndStorageRules> _registeredTypeContracts =
          new ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>();
@@ -283,9 +226,6 @@ namespace Com.MarcusTS.SmartDI
       /// <summary>
       ///    A dictionary of instances that are shared between one ore more other instances. When the list of shared
       ///    instances reaches zero, the main instance is removed.
-      /// </summary>
-      /// <summary>
-      /// The shared instances with bound members
       /// </summary>
       protected readonly IDictionary<object, List<object>> _sharedInstancesWithBoundMembers =
          new ConcurrentDictionary<object, List<object>>();
@@ -298,18 +238,10 @@ namespace Com.MarcusTS.SmartDI
       ///    Gets the is argument exception thrown.
       /// </summary>
       /// <value>The is argument exception thrown.</value>
-      /// <summary>
-      /// Gets the is argument exception thrown.
-      /// </summary>
-      /// <value>The is argument exception thrown.</value>
       protected string IsArgumentExceptionThrown { get; private set; }
 
       /// <summary>
       ///    Gets the is operation exception thrown.
-      /// </summary>
-      /// <value>The is operation exception thrown.</value>
-      /// <summary>
-      /// Gets the is operation exception thrown.
       /// </summary>
       /// <value>The is operation exception thrown.</value>
       protected string IsOperationExceptionThrown { get; private set; }
@@ -318,10 +250,6 @@ namespace Com.MarcusTS.SmartDI
       ///    Gets or sets a value indicating whether this instance is unit testing.
       /// </summary>
       /// <value><c>true</c> if this instance is unit testing, else <c>false</c>.</value>
-      /// <summary>
-      /// Gets or sets a value indicating whether this instance is unit testing.
-      /// </summary>
-      /// <value><c>true</c> if this instance is unit testing; otherwise, <c>false</c>.</value>
       protected bool IsUnitTesting { get; set; }
 
       /// <summary>
@@ -333,10 +261,6 @@ namespace Com.MarcusTS.SmartDI
       ///    any existing registration.
       /// </summary>
       /// <value><c>true</c> if [throw on attempt to assign duplicate contract sub type], else <c>false</c>.</value>
-      /// <summary>
-      /// Gets or sets a value indicating whether [throw on attempt to assign duplicate contract sub type].
-      /// </summary>
-      /// <value><c>true</c> if [throw on attempt to assign duplicate contract sub type]; otherwise, <c>false</c>.</value>
       protected bool ThrowOnAttemptToAssignDuplicateContractSubType { get; set; }
 
       /// <summary>
@@ -354,10 +278,6 @@ namespace Com.MarcusTS.SmartDI
       ///    THIS IS SLOPPY... so try to set this Boolean to True and make careful registrations.
       /// </summary>
       /// <value><c>true</c> if [throw on multiple registered types for one resolved type], else <c>false</c>.</value>
-      /// <summary>
-      /// Gets or sets a value indicating whether [throw on multiple registered types for one resolved type].
-      /// </summary>
-      /// <value><c>true</c> if [throw on multiple registered types for one resolved type]; otherwise, <c>false</c>.</value>
       protected bool ThrowOnMultipleRegisteredTypesForOneResolvedType { get; set; }
 
       #endregion Protected Properties
@@ -371,13 +291,6 @@ namespace Com.MarcusTS.SmartDI
       ///    this step is skipped, none of the lifecycle protections will occur!
       /// </summary>
       /// <param name="containerObj">A variable that was inserted into the container "live" and is now being deactivated.</param>
-      /// <summary>
-      /// Called by the deriver whenever a class is about to disappear from view. It is better to call this before the
-      /// finalizer, as that can be extremely late. An example would be Xamarin.Forms.ContentPage.OnDisappearing. Other
-      /// views or view models will have to listen to the original page event and then notify about their own demise. If
-      /// this step is skipped, none of the lifecycle protections will occur!
-      /// </summary>
-      /// <param name="containerObj">The container object.</param>
       public virtual void ContainerObjectIsDisappearing(object containerObj)
       {
          // Remove the class from the global singletons
@@ -400,9 +313,6 @@ namespace Com.MarcusTS.SmartDI
       /// <summary>
       ///    Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
       /// </summary>
-      /// <summary>
-      /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-      /// </summary>
       public void Dispose()
       {
          Dispose(true);
@@ -412,12 +322,6 @@ namespace Com.MarcusTS.SmartDI
       /// <summary>
       ///    Determine of a qualifying registration exists for a given type.
       ///    Could be used as a pre-tst before Resolve() if confusion exists as to the safety.
-      /// </summary>
-      /// <typeparam name="T"></typeparam>
-      /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
-      /// <summary>
-      /// Determine of a qualifying registration exists for a given type.
-      /// Could be used as a pre-tst before Resolve() if confusion exists as to the safety.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
@@ -432,12 +336,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <param name="type">The class type that would be instantiated by the qualifying registration.</param>
       /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
-      /// <summary>
-      /// Determine of a qualifying registration exists for a given type.
-      /// Could be used as a pre-tst before Resolve() if confusion exists as to the safety.
-      /// </summary>
-      /// <param name="type">The class type that would be instantiated by the qualifying registration.</param>
-      /// <returns><c>true</c> if a qualifying registration exits, else <c>false</c>.</returns>
       public bool QualifyingRegistrationsExist(Type type)
       {
          return GetQualifyingRegistrations(type).IsNotEmpty();
@@ -447,11 +345,6 @@ namespace Com.MarcusTS.SmartDI
       ///    Adds a list of types that the type can be resolved as. Includes creators and storage rules.
       /// </summary>
       /// <param name="classT">The base type for the class rule.</param>
-      /// <param name="creatorsAndRules">The list of class creators and rules. The creators can be null.</param>
-      /// <summary>
-      /// Adds a list of types that the type can be resolved as. Includes creators and storage rules.
-      /// </summary>
-      /// <param name="classT">The class type that owns the contracts.</param>
       /// <param name="creatorsAndRules">The list of class creators and rules. The creators can be null.</param>
       public void RegisterTypeContracts(Type                                             classT,
                                         IDictionary<Type, IProvideCreatorAndStorageRule> creatorsAndRules)
@@ -545,14 +438,6 @@ namespace Com.MarcusTS.SmartDI
       ///    If supplied, determines which competing resolution will be returned for the type
       ///    requested.
       /// </param>
-      /// <returns>System.Object.</returns>
-      /// <summary>
-      /// Resolves the specified type requested t.
-      /// </summary>
-      /// <param name="typeRequestedT">The type requested t.</param>
-      /// <param name="ruleRequested">The rule requested.</param>
-      /// <param name="boundParent">The bound parent.</param>
-      /// <param name="conflictResolver">The conflict resolver.</param>
       /// <returns>System.Object.</returns>
       public object Resolve(Type         typeRequestedT,
                             StorageRules ruleRequested = StorageRules.AnyAccessLevel,
@@ -798,11 +683,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <typeparam name="TParent">The generic parent type</typeparam>
       /// <param name="typesToUnregister">The types to remove.</param>
-      /// <summary>
-      /// Removes a list of types that the parent type can be resolved as. Includes creators and storage rules.
-      /// </summary>
-      /// <typeparam name="TParent">The generic parent type</typeparam>
-      /// <param name="typesToUnregister">The types to remove.</param>
       public void UnregisterTypeContracts<TParent>(params Type[] typesToUnregister)
       {
          if (!_registeredTypeContracts.ContainsKey(typeof(TParent)))
@@ -844,7 +724,7 @@ namespace Com.MarcusTS.SmartDI
       #region Protected Methods
 
       /// <summary>
-      /// Clears the exceptions.
+      ///    Clears the exceptions.
       /// </summary>
       protected void ClearExceptions()
       {
@@ -853,11 +733,13 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Adds a list of bound instances to a single shared instance.
+      ///    Adds a list of bound instances to a single shared instance.
       /// </summary>
       /// <param name="sharedInstance">The shared instance.</param>
-      /// <param name="sharedInstanceType">The type of the object. The shared instance is often just an object without a final
-      /// type.</param>
+      /// <param name="sharedInstanceType">
+      ///    The type of the object. The shared instance is often just an object without a final
+      ///    type.
+      /// </param>
       /// <param name="boundParents">The bound member. Each of these are a different "parent" to the same shared instance.</param>
       protected void CreateSharedInstances(object          sharedInstance,
                                            Type            sharedInstanceType,
@@ -882,7 +764,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Adds a key-value pair with a class type and an instance of that class.
+      ///    Adds a key-value pair with a class type and an instance of that class.
       /// </summary>
       /// <param name="instance">The instance of the type.</param>
       /// <param name="typeToSaveAs">The keyed type for storage.</param>
@@ -900,10 +782,12 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Releases unmanaged and - optionally - managed resources.
+      ///    Releases unmanaged and - optionally - managed resources.
       /// </summary>
-      /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
-      /// unmanaged resources.</param>
+      /// <param name="disposing">
+      ///    <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+      ///    unmanaged resources.
+      /// </param>
       protected virtual void Dispose(bool disposing)
       {
          ReleaseUnmanagedResources();
@@ -912,7 +796,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Releases the unmanaged resources.
+      ///    Releases the unmanaged resources.
       /// </summary>
       protected virtual void ReleaseUnmanagedResources()
       {
@@ -920,7 +804,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Removes a bound instance from all shared instances. Also cleans up any orphaned shared instances.
+      ///    Removes a bound instance from all shared instances. Also cleans up any orphaned shared instances.
       /// </summary>
       /// <param name="obj">The object.</param>
       protected void RemoveBoundSharedDependencies(object obj)
@@ -968,7 +852,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// If the type exists as a shared instance, removes it. Only used if this shared instance is about to go out of view.
+      ///    If the type exists as a shared instance, removes it. Only used if this shared instance is about to go out of view.
       /// </summary>
       /// <typeparam name="ObjectT">The type of the object t.</typeparam>
       /// <param name="obj">The object.</param>
@@ -986,7 +870,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Removes a global instance as long as it is the same type and reference.
+      ///    Removes a global instance as long as it is the same type and reference.
       /// </summary>
       /// <typeparam name="ObjectT">The type of the object t.</typeparam>
       /// <param name="obj">The object.</param>
@@ -1003,7 +887,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Clears all internal lists and exceptions.
+      ///    Clears all internal lists and exceptions.
       /// </summary>
       protected void ResetContainer()
       {
@@ -1019,7 +903,7 @@ namespace Com.MarcusTS.SmartDI
       #region Private Methods
 
       /// <summary>
-      /// Creates the complete message.
+      ///    Creates the complete message.
       /// </summary>
       /// <param name="methodName">Name of the method.</param>
       /// <param name="message">The message.</param>
@@ -1032,7 +916,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Looks for a valid registration as the "best choice" for the current conditions.
+      ///    Looks for a valid registration as the "best choice" for the current conditions.
       /// </summary>
       /// <param name="typeRequestedT">The type requested t.</param>
       /// <param name="registrations">The registrations.</param>
@@ -1062,7 +946,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Attempts to resolve conlicts, if they exist.
+      ///    Attempts to resolve conlicts, if they exist.
       /// </summary>
       /// <param name="conflictResolver">The conflict resolver.</param>
       /// <param name="qualifyingRegistrations">The qualifying registrations.</param>
@@ -1101,7 +985,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Tries to create an object and reports the result.
+      ///    Tries to create an object and reports the result.
       /// </summary>
       /// <param name="qualifyingMasterType">Type of the qualifying master.</param>
       /// <param name="instantiatedObject">The instantiated object.</param>
@@ -1187,7 +1071,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Gets the qualifying registrations.
+      ///    Gets the qualifying registrations.
       /// </summary>
       /// <param name="typeRequestedT">The type requested t.</param>
       /// <returns>ConcurrentDictionary&lt;Type, ITimeStampedCreatorAndStorageRules&gt;.</returns>
@@ -1232,7 +1116,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Attempts to use the provided instance creator, if available, and reports the result.
+      ///    Attempts to use the provided instance creator, if available, and reports the result.
       /// </summary>
       /// <param name="resolutionToSeek">The resolution to seek.</param>
       /// <param name="finalTypeRequestedT">The final type requested t.</param>
@@ -1266,7 +1150,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Seeks the existing contract.
+      ///    Seeks the existing contract.
       /// </summary>
       /// <param name="classT">The class t.</param>
       /// <param name="creatorsAndRules">The creators and rules.</param>
@@ -1314,7 +1198,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Throws the argument exception.
+      ///    Throws the argument exception.
       /// </summary>
       /// <param name="methodName">Name of the method.</param>
       /// <param name="message">The message.</param>
@@ -1336,7 +1220,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Throws the operation exception.
+      ///    Throws the operation exception.
       /// </summary>
       /// <param name="methodName">Name of the method.</param>
       /// <param name="message">The message.</param>

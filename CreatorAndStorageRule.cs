@@ -34,20 +34,20 @@ namespace Com.MarcusTS.SmartDI
    using System;
 
    /// <summary>
-   /// Interface IProvideCreatorAndStorageRule
+   ///    Interface IProvideCreatorAndStorageRule
    /// </summary>
    public interface IProvideCreatorAndStorageRule
    {
       #region Public Properties
 
       /// <summary>
-      /// Gets or sets the provided creator.
+      ///    Gets or sets the provided creator.
       /// </summary>
       /// <value>The provided creator.</value>
       Func<object> ProvidedCreator { get; set; }
 
       /// <summary>
-      /// Gets or sets the provided storage rule.
+      ///    Gets or sets the provided storage rule.
       /// </summary>
       /// <value>The provided storage rule.</value>
       StorageRules ProvidedStorageRule { get; set; }
@@ -56,9 +56,9 @@ namespace Com.MarcusTS.SmartDI
    }
 
    /// <summary>
-   /// Class CreatorAndStorageRule.
-   /// Implements the <see cref="IProvideCreatorAndStorageRule" />
-   /// Implements the <see cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
+   ///    Class CreatorAndStorageRule.
+   ///    Implements the <see cref="IProvideCreatorAndStorageRule" />
+   ///    Implements the <see cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
    /// <seealso cref="IProvideCreatorAndStorageRule" />
@@ -67,7 +67,7 @@ namespace Com.MarcusTS.SmartDI
       #region Public Constructors
 
       /// <summary>
-      /// Initializes a new instance of the <see cref="CreatorAndStorageRule" /> class.
+      ///    Initializes a new instance of the <see cref="CreatorAndStorageRule" /> class.
       /// </summary>
       /// <param name="creator">The creator.</param>
       /// <param name="storageRule">The storage rule.</param>
@@ -84,13 +84,13 @@ namespace Com.MarcusTS.SmartDI
       #region Public Properties
 
       /// <summary>
-      /// Gets or sets the provided creator.
+      ///    Gets or sets the provided creator.
       /// </summary>
       /// <value>The provided creator.</value>
       public Func<object> ProvidedCreator { get; set; }
 
       /// <summary>
-      /// Gets or sets the provided storage rule.
+      ///    Gets or sets the provided storage rule.
       /// </summary>
       /// <value>The provided storage rule.</value>
       public StorageRules ProvidedStorageRule { get; set; }

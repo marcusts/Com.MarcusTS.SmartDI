@@ -2,7 +2,7 @@
 // Assembly         : Com.MarcusTS.SmartDI
 // Author           : Stephen Marcus (Marcus Technical Services, Inc.)
 // Created          : 05-05-2018
-// Last Modified On : 12-27-2018
+// Last Modified On : 01-06-2019
 //
 // <copyright file="SmartDIExtensions.cs" company="Marcus Technical Services, Inc.">
 //     @2018 Marcus Technical Services, Inc.
@@ -38,14 +38,14 @@ namespace Com.MarcusTS.SmartDI
    using SharedUtils.Utils;
 
    /// <summary>
-   /// Class SmartDIExtensions.
+   ///    Class SmartDIExtensions.
    /// </summary>
    public static class SmartDIExtensions
    {
       #region Public Methods
 
       /// <summary>
-      /// Adds the or update.
+      ///    Adds the or update.
       /// </summary>
       /// <param name="retDict">The ret dictionary.</param>
       /// <param name="key">The key.</param>
@@ -59,7 +59,99 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Another easy-access call to <see cref="RegisterType" />.
+      ///    Attempts to resolve, and on failure, registers and tries again.
+      ///    Might still return null, so must be checked after the call against default{classT}.
+      /// </summary>
+      /// <typeparam name="classT">The type of the class t.</typeparam>
+      /// <param name="diContainer">The di container.</param>
+      /// <param name="storageRule">The storage rule.</param>
+      /// <param name="boundInstance">The bound instance.</param>
+      /// <param name="creator">The creator.</param>
+      /// <param name="conflictResolver">The conflict resolver.</param>
+      /// <returns>classT.</returns>
+      public static classT RegisterAndResolve<classT>(this ISmartDIContainer diContainer,
+                                                      StorageRules storageRule =
+                                                         StorageRules.AnyAccessLevel,
+                                                      object       boundInstance = null,
+                                                      Func<object> creator       = null,
+                                                      Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>,
+                                                         IConflictResolution> conflictResolver = null)
+         where classT : class
+      {
+         var triedOnce = false;
+
+         TRYAGAIN:
+         // If not registered yet, do so now
+         var possibleT = diContainer.Resolve<classT>(storageRule, boundInstance, conflictResolver);
+
+         if (possibleT.IsNotAnEqualObjectTo(default(classT)))
+         {
+            return possibleT;
+         }
+
+         // No reason to keep trying
+         if (triedOnce)
+         {
+            return default(classT);
+         }
+
+         // ELSE Register and try again
+         RegisterSoloType<classT>(diContainer, storageRule, creator);
+         triedOnce = true;
+         goto TRYAGAIN;
+      }
+
+      /// <summary>
+      ///    Attempts to resolve, and on failure, registers and tries again.
+      ///    Might still return null, so must be checked after the call against default{classT}.
+      /// </summary>
+      /// <typeparam name="classT">The type of the class t.</typeparam>
+      /// <typeparam name="interfaceT">The type of the interface t.</typeparam>
+      /// <param name="diContainer">The di container.</param>
+      /// <param name="storageRule">The storage rule.</param>
+      /// <param name="boundInstance">The bound instance.</param>
+      /// <param name="creator">The creator.</param>
+      /// <param name="conflictResolver">The conflict resolver.</param>
+      /// <returns>interfaceT.</returns>
+      public static interfaceT RegisterAndResolveAsInterface<classT, interfaceT>(this ISmartDIContainer diContainer,
+                                                                                 StorageRules storageRule =
+                                                                                    StorageRules.AnyAccessLevel,
+                                                                                 object       boundInstance = null,
+                                                                                 Func<object> creator       = null,
+                                                                                 Func<IDictionary<Type,
+                                                                                          ITimeStampedCreatorAndStorageRules
+                                                                                       >,
+                                                                                       IConflictResolution>
+                                                                                    conflictResolver =
+                                                                                    null)
+         where classT : class, interfaceT
+         where interfaceT : class
+      {
+         var triedOnce = false;
+
+         TRYAGAIN:
+         // If not registered yet, do so now
+         var possibleT = diContainer.Resolve<interfaceT>(storageRule, boundInstance, conflictResolver);
+
+         if (possibleT.IsNotAnEqualObjectTo(default(classT)))
+         {
+            return possibleT;
+         }
+
+         // No reason to keep trying
+         if (triedOnce)
+         {
+            return default(classT);
+         }
+
+         // ELSE Register and try again
+         RegisterTypeAsInterface<classT>(diContainer, typeof(interfaceT), storageRule, creator);
+         triedOnce = true;
+         goto TRYAGAIN;
+      }
+
+      /// <summary>
+      ///    Another easy-access call to <see cref="RegisterType" />.
       /// </summary>
       /// <param name="diContainer">The di container.</param>
       /// <param name="classType">Type of the class.</param>
@@ -74,7 +166,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// The same as <see cref="RegisterType" />, but with hyper-simplified parameters.
+      ///    The same as <see cref="RegisterType" />, but with hyper-simplified parameters.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="diContainer">The di container.</param>
@@ -89,55 +181,63 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Registers a base type so that it can be resolved in the future.
-      /// Most of the parameters are optional. If omitted, we make the exact class type
-      /// available for a call to Resolve(), but do not allow other forms of access.
-      /// To Resolve() and convert to an interface, add those to typesToCastAs.
-      /// You can also call the base method, which is wide open but must be
-      /// managed carefully.
+      ///    Registers a base type so that it can be resolved in the future.
+      ///    Most of the parameters are optional. If omitted, we make the exact class type
+      ///    available for a call to Resolve(), but do not allow other forms of access.
+      ///    To Resolve() and convert to an interface, add those to typesToCastAs.
+      ///    You can also call the base method, which is wide open but must be
+      ///    managed carefully.
       /// </summary>
       /// <param name="diContainer">The DI container -- omitted when you call this method, as it is an extension.</param>
       /// <param name="classType">The base class type that will be constructed. *Must* be a concrete class.</param>
-      /// <param name="storageRule">Determines if a strict rule will be enforced about how the new instance of the class will be stored upon Resolve():
-      /// * AnyAccessLevel: The default; allows the caller to Resolve to determine the way the instance will be stored.
-      /// * DoNotStore: A new instance of the variable will be issued, but it will *not* be stored.
-      /// This is typical where you just need a view model for a view, and there is no reason to maintain it globally.
-      /// If the view model contains data, however, and if it might be required elsewhere in the app, then this will
-      /// cause you to have isolated instances that have separate states. So in that case, it is not recommended.
-      /// You should use the SharedDependencyBetweenInstances in that case.
-      /// * SharedDependencyBetweenInstances: The container will issue an instance and also store it.
-      /// It will be shared with any requester. This *requires* that you supply your host ("bound") class,
-      /// as there is no other way to manage the relationship between that host and this new instance.
-      /// For example, if you bind a view model to a view, the host is the view and the resolved instance is the view model.
-      /// In the same scenario, the view might belong to a page, so the host would be the page
-      /// and the resolved instance will be the view.
-      /// Because it is a shared instance, it cannot be considered "private".  If that is required, use an DoNotStore.
-      /// As soon as all of the bound hosts are disposed, this instance will also be automatically removed from the container.
-      /// * GlobalSingleton: Creates only one instance of the requested type and stores it globally *forever* as long as the
-      /// container is alive.
-      /// Can be used for service injection. Almost never used for any other purpose.</param>
-      /// <param name="creator">A function for creating the class type, if any.
-      /// You do not need to cast as the final type.  The container handles that for you.</param>
-      /// <param name="addMainTypeAsDefault">Optional, and defaulted to false.  Often, DI containers are asked to create these sorts of instances:
-      /// * Cat as IAnimal
-      /// * Dog as IAnimal
-      /// * Bird as IAnimal
-      /// In all three cases, you might pass this as the creator: "() =&gt; new Cat()" or dog or bird, etc.
-      /// We would then typecast the resulting instance as IAnimal for you.
-      /// However, you might do something entirely different:
-      /// * MyClass as ImplementedInterface
-      /// In which case, your creator might be: "() =&gt; new MyClass()".  We would resolve this as ImplementedInterface.
-      /// But what if you also wanted to resolve like this: "Resolve{BaseClass}();" ???
-      /// You would turn this boolean parameter to True.
-      /// Your registration would be:  RegisterType(BaseClass, creator: () =&gt; new BaseClass, addMainAsDefault =
-      /// true,typesToCastAs = typeof(ImplementedInterface).
-      /// After that, you can resolve as either BaseClass or ImplementedInterface.</param>
-      /// <param name="typesToCastAs">The list of types to type-cast the constructed base class as.
-      /// It can be any number. Remember to use "typeof(your type)" for each type, separated by a comma.
-      /// The storage rule for each of these types is the same as the main one you pass in.
-      /// The creator will also be the same for all of these types.
-      /// To create more complex storage rules and creators, call the main library's
-      /// <see cref="SmartDIContainer.RegisterTypeContracts" />.</param>
+      /// <param name="storageRule">
+      ///    Determines if a strict rule will be enforced about how the new instance of the class will be stored upon Resolve():
+      ///    * AnyAccessLevel: The default; allows the caller to Resolve to determine the way the instance will be stored.
+      ///    * DoNotStore: A new instance of the variable will be issued, but it will *not* be stored.
+      ///    This is typical where you just need a view model for a view, and there is no reason to maintain it globally.
+      ///    If the view model contains data, however, and if it might be required elsewhere in the app, then this will
+      ///    cause you to have isolated instances that have separate states. So in that case, it is not recommended.
+      ///    You should use the SharedDependencyBetweenInstances in that case.
+      ///    * SharedDependencyBetweenInstances: The container will issue an instance and also store it.
+      ///    It will be shared with any requester. This *requires* that you supply your host ("bound") class,
+      ///    as there is no other way to manage the relationship between that host and this new instance.
+      ///    For example, if you bind a view model to a view, the host is the view and the resolved instance is the view model.
+      ///    In the same scenario, the view might belong to a page, so the host would be the page
+      ///    and the resolved instance will be the view.
+      ///    Because it is a shared instance, it cannot be considered "private".  If that is required, use an DoNotStore.
+      ///    As soon as all of the bound hosts are disposed, this instance will also be automatically removed from the container.
+      ///    * GlobalSingleton: Creates only one instance of the requested type and stores it globally *forever* as long as the
+      ///    container is alive.
+      ///    Can be used for service injection. Almost never used for any other purpose.
+      /// </param>
+      /// <param name="creator">
+      ///    A function for creating the class type, if any.
+      ///    You do not need to cast as the final type.  The container handles that for you.
+      /// </param>
+      /// <param name="addMainTypeAsDefault">
+      ///    Optional, and defaulted to false.  Often, DI containers are asked to create these sorts of instances:
+      ///    * Cat as IAnimal
+      ///    * Dog as IAnimal
+      ///    * Bird as IAnimal
+      ///    In all three cases, you might pass this as the creator: "() =&gt; new Cat()" or dog or bird, etc.
+      ///    We would then typecast the resulting instance as IAnimal for you.
+      ///    However, you might do something entirely different:
+      ///    * MyClass as ImplementedInterface
+      ///    In which case, your creator might be: "() =&gt; new MyClass()".  We would resolve this as ImplementedInterface.
+      ///    But what if you also wanted to resolve like this: "Resolve{BaseClass}();" ???
+      ///    You would turn this boolean parameter to True.
+      ///    Your registration would be:  RegisterType(BaseClass, creator: () =&gt; new BaseClass, addMainAsDefault =
+      ///    true,typesToCastAs = typeof(ImplementedInterface).
+      ///    After that, you can resolve as either BaseClass or ImplementedInterface.
+      /// </param>
+      /// <param name="typesToCastAs">
+      ///    The list of types to type-cast the constructed base class as.
+      ///    It can be any number. Remember to use "typeof(your type)" for each type, separated by a comma.
+      ///    The storage rule for each of these types is the same as the main one you pass in.
+      ///    The creator will also be the same for all of these types.
+      ///    To create more complex storage rules and creators, call the main library's
+      ///    <see cref="SmartDIContainer.RegisterTypeContracts" />.
+      /// </param>
       public static void RegisterType(this ISmartDIContainer diContainer,
                                       Type                   classType,
                                       StorageRules           storageRule          = StorageRules.AnyAccessLevel,
@@ -179,7 +279,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// The same as <see cref="RegisterType" />, except with a more Generic way to state the base class type.
+      ///    The same as <see cref="RegisterType" />, except with a more Generic way to state the base class type.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="diContainer">The di container.</param>
@@ -198,7 +298,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Another easy-access call to <see cref="RegisterType" />.
+      ///    Another easy-access call to <see cref="RegisterType" />.
       /// </summary>
       /// <param name="diContainer">The di container.</param>
       /// <param name="classType">Type of the class.</param>
@@ -215,7 +315,7 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// The same as <see cref="RegisterType" />, but with hyper-simplified parameters.
+      ///    The same as <see cref="RegisterType" />, but with hyper-simplified parameters.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="diContainer">The di container.</param>
@@ -232,8 +332,8 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      /// Provides a generic argument for the type to resolve.
-      /// Casts as the requested type upon return.
+      ///    Provides a generic argument for the type to resolve.
+      ///    Casts as the requested type upon return.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="diContainer">The di container.</param>
@@ -242,9 +342,8 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="conflictResolver">The conflict resolver.</param>
       /// <returns>T.</returns>
       public static T Resolve<T>(this ISmartDIContainer diContainer,
-                                 StorageRules storageRule =
-                                    StorageRules.AnyAccessLevel,
-                                 object boundInstance = null,
+                                 StorageRules           storageRule   = StorageRules.AnyAccessLevel,
+                                 object                 boundInstance = null,
                                  Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution>
                                     conflictResolver = null)
          where T : class

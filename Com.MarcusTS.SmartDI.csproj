@@ -29,13 +29,13 @@ The SmartDI Container is unique in that it:
     <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
     <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
     <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-    <Version>1.0.10</Version>
-    <AssemblyVersion>1.0.10.0</AssemblyVersion>
-    <FileVersion>1.0.10.0</FileVersion>
+    <Version>1.0.11</Version>
+    <AssemblyVersion>1.0.11.0</AssemblyVersion>
+    <FileVersion>1.0.11.0</FileVersion>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <PackageReleaseNotes>General debug</PackageReleaseNotes>
+    <PackageReleaseNotes>Added register and resolve extension methods.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
