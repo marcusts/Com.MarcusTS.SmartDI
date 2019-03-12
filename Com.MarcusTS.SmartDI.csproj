@@ -29,24 +29,24 @@ The SmartDI Container is unique in that it:
     <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
     <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
     <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-    <Version>1.0.11</Version>
-    <AssemblyVersion>1.0.11.0</AssemblyVersion>
-    <FileVersion>1.0.11.0</FileVersion>
+    <Version>1.0.12</Version>
+    <AssemblyVersion>1.0.12.0</AssemblyVersion>
+    <FileVersion>1.0.12.0</FileVersion>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <PackageReleaseNotes>Added register and resolve extension methods.</PackageReleaseNotes>
+    <PackageReleaseNotes>Bug fixes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <Optimize>false</Optimize>
-    <DocumentationFile>D:\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
+    <DocumentationFile>M:\MyDocs\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>D:\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
+    <DocumentationFile>M:\MyDocs\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

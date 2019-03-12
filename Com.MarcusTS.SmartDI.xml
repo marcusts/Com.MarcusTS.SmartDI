@@ -201,6 +201,11 @@
             <typeparam name="TParent">The generic parent type</typeparam>
             <param name="typesToUnregister">The types to remove.</param>
         </member>
+        <member name="P:Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors">
+            <summary>
+            Ignores (will not act upon) errors as long as true.
+            </summary>
+        </member>
         <member name="T:Com.MarcusTS.SmartDI.SmartDIContainer">
             <summary>
                Class SmartDIContainer.
@@ -224,6 +229,17 @@
                if set to <c>true</c> [throw on attempt to assign
                duplicate contract sub type].
             </param>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsUnitTesting">
+            <summary>
+               Gets or sets a value indicating whether this instance is unit testing.
+            </summary>
+            <value><c>true</c> if this instance is unit testing, else <c>false</c>.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors">
+            <summary>
+            Ignores (will not act upon) errors as long as true.
+            </summary>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.Finalize">
             <summary>
@@ -258,12 +274,6 @@
                Gets the is operation exception thrown.
             </summary>
             <value>The is operation exception thrown.</value>
-        </member>
-        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsUnitTesting">
-            <summary>
-               Gets or sets a value indicating whether this instance is unit testing.
-            </summary>
-            <value><c>true</c> if this instance is unit testing, else <c>false</c>.</value>
         </member>
         <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.ThrowOnAttemptToAssignDuplicateContractSubType">
             <summary>

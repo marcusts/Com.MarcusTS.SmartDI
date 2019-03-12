@@ -1,25 +1,20 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 05-05-2018
-// Last Modified On : 01-06-2019
-//
-// <copyright file="SmartDIExtensions.cs" company="Marcus Technical Services, Inc.">
-//     @2018 Marcus Technical Services, Inc.
+// <copyright file=SmartDIExtensions.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
-//
+// 
 // MIT License
-//
+// 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in all
 // copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
@@ -35,7 +30,7 @@ namespace Com.MarcusTS.SmartDI
    using System.Collections.Concurrent;
    using System.Collections.Generic;
    using System.Linq;
-   using SharedUtils.Utils;
+   using Com.MarcusTS.SharedUtils.Utils;
 
    /// <summary>
    ///    Class SmartDIExtensions.
@@ -50,12 +45,18 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="retDict">The ret dictionary.</param>
       /// <param name="key">The key.</param>
       /// <param name="value">The value.</param>
-      public static void AddOrUpdate(this ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules> retDict,
-                                     Type                                                                key,
-                                     ITimeStampedCreatorAndStorageRules                                  value)
+      public static void AddOrUpdate
+      (
+         this ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules> retDict,
+         Type                                                                key,
+         ITimeStampedCreatorAndStorageRules                                  value
+      )
       {
-         retDict.AddOrUpdate(key, value, (k,
-                                          v) => v);
+         retDict.AddOrUpdate(key, value,
+                             (
+                                k,
+                                v
+                             ) => v);
       }
 
       /// <summary>
@@ -69,20 +70,27 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="creator">The creator.</param>
       /// <param name="conflictResolver">The conflict resolver.</param>
       /// <returns>classT.</returns>
-      public static classT RegisterAndResolve<classT>(this ISmartDIContainer diContainer,
-                                                      StorageRules storageRule =
-                                                         StorageRules.AnyAccessLevel,
-                                                      object       boundInstance = null,
-                                                      Func<object> creator       = null,
-                                                      Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>,
-                                                         IConflictResolution> conflictResolver = null)
+      public static classT RegisterAndResolve<classT>
+      (
+         this ISmartDIContainer                                                           diContainer,
+         StorageRules                                                                     storageRule      = StorageRules.AnyAccessLevel,
+         object                                                                           boundInstance    = null,
+         Func<object>                                                                     creator          = null,
+         Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
+      )
          where classT : class
       {
          var triedOnce = false;
 
          TRYAGAIN:
-         // If not registered yet, do so now
+
+         // Prevents thrown errors temporarily
+         diContainer.IgnoreAllErrors = true;
+
+         // Resolves CLASS
          var possibleT = diContainer.Resolve<classT>(storageRule, boundInstance, conflictResolver);
+
+         diContainer.IgnoreAllErrors = false;
 
          if (possibleT.IsNotAnEqualObjectTo(default(classT)))
          {
@@ -113,25 +121,28 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="creator">The creator.</param>
       /// <param name="conflictResolver">The conflict resolver.</param>
       /// <returns>interfaceT.</returns>
-      public static interfaceT RegisterAndResolveAsInterface<classT, interfaceT>(this ISmartDIContainer diContainer,
-                                                                                 StorageRules storageRule =
-                                                                                    StorageRules.AnyAccessLevel,
-                                                                                 object       boundInstance = null,
-                                                                                 Func<object> creator       = null,
-                                                                                 Func<IDictionary<Type,
-                                                                                          ITimeStampedCreatorAndStorageRules
-                                                                                       >,
-                                                                                       IConflictResolution>
-                                                                                    conflictResolver =
-                                                                                    null)
+      public static interfaceT RegisterAndResolveAsInterface<classT, interfaceT>
+      (
+         this ISmartDIContainer                                                           diContainer,
+         StorageRules                                                                     storageRule      = StorageRules.AnyAccessLevel,
+         object                                                                           boundInstance    = null,
+         Func<object>                                                                     creator          = null,
+         Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
+      )
          where classT : class, interfaceT
          where interfaceT : class
       {
          var triedOnce = false;
 
          TRYAGAIN:
-         // If not registered yet, do so now
+
+         // Prevents thrown errors temporarily
+         diContainer.IgnoreAllErrors = true;
+
+         // Resolves INTERFACE
          var possibleT = diContainer.Resolve<interfaceT>(storageRule, boundInstance, conflictResolver);
+
+         diContainer.IgnoreAllErrors = false;
 
          if (possibleT.IsNotAnEqualObjectTo(default(classT)))
          {
@@ -157,10 +168,13 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="classType">Type of the class.</param>
       /// <param name="storageRule">The storage rule.</param>
       /// <param name="creator">The creator.</param>
-      public static void RegisterSoloType(this ISmartDIContainer diContainer,
-                                          Type                   classType,
-                                          StorageRules           storageRule = StorageRules.AnyAccessLevel,
-                                          Func<object>           creator     = null)
+      public static void RegisterSoloType
+      (
+         this ISmartDIContainer diContainer,
+         Type                   classType,
+         StorageRules           storageRule = StorageRules.AnyAccessLevel,
+         Func<object>           creator     = null
+      )
       {
          diContainer.RegisterType(classType, storageRule, creator, true);
       }
@@ -172,9 +186,12 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="diContainer">The di container.</param>
       /// <param name="storageRule">The storage rule.</param>
       /// <param name="creator">The creator.</param>
-      public static void RegisterSoloType<T>(this ISmartDIContainer diContainer,
-                                             StorageRules           storageRule = StorageRules.AnyAccessLevel,
-                                             Func<object>           creator     = null)
+      public static void RegisterSoloType<T>
+      (
+         this ISmartDIContainer diContainer,
+         StorageRules           storageRule = StorageRules.AnyAccessLevel,
+         Func<object>           creator     = null
+      )
          where T : class
       {
          diContainer.RegisterSoloType(typeof(T), storageRule, creator);
@@ -238,12 +255,15 @@ namespace Com.MarcusTS.SmartDI
       ///    To create more complex storage rules and creators, call the main library's
       ///    <see cref="SmartDIContainer.RegisterTypeContracts" />.
       /// </param>
-      public static void RegisterType(this ISmartDIContainer diContainer,
-                                      Type                   classType,
-                                      StorageRules           storageRule          = StorageRules.AnyAccessLevel,
-                                      Func<object>           creator              = null,
-                                      bool                   addMainTypeAsDefault = false,
-                                      params Type[]          typesToCastAs)
+      public static void RegisterType
+      (
+         this ISmartDIContainer diContainer,
+         Type                   classType,
+         StorageRules           storageRule          = StorageRules.AnyAccessLevel,
+         Func<object>           creator              = null,
+         bool                   addMainTypeAsDefault = false,
+         params Type[]          typesToCastAs
+      )
       {
          // If accessible types contains the main class type, it is the same as setting that Boolean true
          addMainTypeAsDefault = addMainTypeAsDefault || typesToCastAs.Any(i => i == classType);
@@ -287,11 +307,14 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="creator">The creator.</param>
       /// <param name="addMainTypeAsDefault">if set to <c>true</c> [add main type as default].</param>
       /// <param name="typesToCastAs">The types to cast as.</param>
-      public static void RegisterType<T>(this ISmartDIContainer diContainer,
-                                         StorageRules           storageRule          = StorageRules.AnyAccessLevel,
-                                         Func<object>           creator              = null,
-                                         bool                   addMainTypeAsDefault = false,
-                                         params Type[]          typesToCastAs)
+      public static void RegisterType<T>
+      (
+         this ISmartDIContainer diContainer,
+         StorageRules           storageRule          = StorageRules.AnyAccessLevel,
+         Func<object>           creator              = null,
+         bool                   addMainTypeAsDefault = false,
+         params Type[]          typesToCastAs
+      )
          where T : class
       {
          diContainer.RegisterType(typeof(T), storageRule, creator, addMainTypeAsDefault, typesToCastAs);
@@ -305,11 +328,14 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="interfaceType">Type of the interface.</param>
       /// <param name="storageRule">The storage rule.</param>
       /// <param name="creator">The creator.</param>
-      public static void RegisterTypeAsInterface(this ISmartDIContainer diContainer,
-                                                 Type                   classType,
-                                                 Type                   interfaceType,
-                                                 StorageRules           storageRule = StorageRules.AnyAccessLevel,
-                                                 Func<object>           creator     = null)
+      public static void RegisterTypeAsInterface
+      (
+         this ISmartDIContainer diContainer,
+         Type                   classType,
+         Type                   interfaceType,
+         StorageRules           storageRule = StorageRules.AnyAccessLevel,
+         Func<object>           creator     = null
+      )
       {
          diContainer.RegisterType(classType, storageRule, creator, false, interfaceType);
       }
@@ -322,10 +348,13 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="interfaceType">Type of the interface.</param>
       /// <param name="storageRule">The storage rule.</param>
       /// <param name="creator">The creator.</param>
-      public static void RegisterTypeAsInterface<T>(this ISmartDIContainer diContainer,
-                                                    Type                   interfaceType,
-                                                    StorageRules           storageRule = StorageRules.AnyAccessLevel,
-                                                    Func<object>           creator     = null)
+      public static void RegisterTypeAsInterface<T>
+      (
+         this ISmartDIContainer diContainer,
+         Type                   interfaceType,
+         StorageRules           storageRule = StorageRules.AnyAccessLevel,
+         Func<object>           creator     = null
+      )
          where T : class
       {
          diContainer.RegisterTypeAsInterface(typeof(T), interfaceType, storageRule, creator);
@@ -341,11 +370,13 @@ namespace Com.MarcusTS.SmartDI
       /// <param name="boundInstance">The bound instance.</param>
       /// <param name="conflictResolver">The conflict resolver.</param>
       /// <returns>T.</returns>
-      public static T Resolve<T>(this ISmartDIContainer diContainer,
-                                 StorageRules           storageRule   = StorageRules.AnyAccessLevel,
-                                 object                 boundInstance = null,
-                                 Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution>
-                                    conflictResolver = null)
+      public static T Resolve<T>
+      (
+         this ISmartDIContainer                                                           diContainer,
+         StorageRules                                                                     storageRule      = StorageRules.AnyAccessLevel,
+         object                                                                           boundInstance    = null,
+         Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
+      )
          where T : class
       {
          var retInstance = diContainer.Resolve(typeof(T), storageRule, boundInstance, conflictResolver) as T;
