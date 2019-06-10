@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-21-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="TimeStampedCreatorAndStorageRules.cs" company="Marcus Technical Services, Inc.">
-//     @2018 Marcus Technical Services, Inc.
+// <copyright file=TimeStampedCreatorAndStorageRules.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -39,8 +34,6 @@ namespace Com.MarcusTS.SmartDI
    /// </summary>
    public interface ITimeStampedCreatorAndStorageRules
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets or sets the creators and storage rules.
       /// </summary>
@@ -52,8 +45,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The when added.</value>
       DateTime WhenAdded { get; set; }
-
-      #endregion Public Properties
    }
 
    /// <summary>
@@ -65,8 +56,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="ITimeStampedCreatorAndStorageRules" />
    public class TimeStampedCreatorAndStorageRules : ITimeStampedCreatorAndStorageRules
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets or sets the creators and storage rules.
       /// </summary>
@@ -78,7 +67,5 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The when added.</value>
       public DateTime WhenAdded { get; set; }
-
-      #endregion Public Properties
    }
 }

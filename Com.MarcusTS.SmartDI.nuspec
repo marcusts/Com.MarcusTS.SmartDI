@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Com.MarcusTS.SmartDI</id>
-    <version>1.0.12</version>
+    <version>1.0.13</version>
     <title>Smart DI Container</title>
     <authors>Stephen Marcus</authors>
     <owners>Marcus Technical Services, Inc.</owners>
@@ -21,7 +21,7 @@
 
        * Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.
     </description>
-    <copyright>Copyright 2018 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
+    <copyright>Copyright 2019 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
      <releaseNotes>Bug fixes.</releaseNotes>
     <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
   </metadata>

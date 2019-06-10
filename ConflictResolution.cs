@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 05-20-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="ConflictResolution.cs" company="Marcus Technical Services, Inc.">
-//     @2018 Marcus Technical Services, Inc.
+// <copyright file=ConflictResolution.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -39,8 +34,6 @@ namespace Com.MarcusTS.SmartDI
    /// </summary>
    public interface IConflictResolution
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets or sets the type of the master.
       /// </summary>
@@ -52,8 +45,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The type to cast with storage rule.</value>
       KeyValuePair<Type, IProvideCreatorAndStorageRule> TypeToCastWithStorageRule { get; set; }
-
-      #endregion Public Properties
    }
 
    /// <summary>
@@ -65,8 +56,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="IConflictResolution" />
    public class ConflictResolution : IConflictResolution
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets or sets the type of the master.
       /// </summary>
@@ -78,7 +67,5 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The type to cast with storage rule.</value>
       public KeyValuePair<Type, IProvideCreatorAndStorageRule> TypeToCastWithStorageRule { get; set; }
-
-      #endregion Public Properties
    }
 }

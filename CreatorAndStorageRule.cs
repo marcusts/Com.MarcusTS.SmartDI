@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 05-05-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="CreatorAndStorageRule.cs" company="Marcus Technical Services, Inc.">
-//     @2018 Marcus Technical Services, Inc.
+// <copyright file=CreatorAndStorageRule.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -38,8 +33,6 @@ namespace Com.MarcusTS.SmartDI
    /// </summary>
    public interface IProvideCreatorAndStorageRule
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets or sets the provided creator.
       /// </summary>
@@ -51,8 +44,6 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The provided storage rule.</value>
       StorageRules ProvidedStorageRule { get; set; }
-
-      #endregion Public Properties
    }
 
    /// <summary>
@@ -64,24 +55,21 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="IProvideCreatorAndStorageRule" />
    public class CreatorAndStorageRule : IProvideCreatorAndStorageRule
    {
-      #region Public Constructors
-
       /// <summary>
       ///    Initializes a new instance of the <see cref="CreatorAndStorageRule" /> class.
       /// </summary>
       /// <param name="creator">The creator.</param>
       /// <param name="storageRule">The storage rule.</param>
-      public CreatorAndStorageRule(Func<object> creator     = null,
-                                   StorageRules storageRule = StorageRules.AnyAccessLevel)
+      public CreatorAndStorageRule
+      (
+         Func<object> creator     = null,
+         StorageRules storageRule = StorageRules.AnyAccessLevel
+      )
       {
          ProvidedStorageRule = storageRule;
 
          ProvidedCreator = creator;
       }
-
-      #endregion Public Constructors
-
-      #region Public Properties
 
       /// <summary>
       ///    Gets or sets the provided creator.
@@ -94,7 +82,5 @@ namespace Com.MarcusTS.SmartDI
       /// </summary>
       /// <value>The provided storage rule.</value>
       public StorageRules ProvidedStorageRule { get; set; }
-
-      #endregion Public Properties
    }
 }

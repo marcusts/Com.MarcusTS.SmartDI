@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 05-07-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="SmartDIContainerForUnitTesting.cs" company="Marcus Technical Services, Inc.">
-//     @2018 Marcus Technical Services, Inc.
+// <copyright file=SmartDIContainerForUnitTesting.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -44,8 +39,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    public interface ISmartDIContainerForUnitTesting : ISmartDIContainer
    {
-      #region Public Properties
-
       /// <summary>
       ///    Gets the exposed global singletons.
       /// </summary>
@@ -88,10 +81,6 @@ namespace Com.MarcusTS.SmartDI
       /// <value>The is operation exception.</value>
       string IsOperationException { get; }
 
-      #endregion Public Properties
-
-      #region Public Methods
-
       /// <summary>
       ///    Clears the unit test exceptions.
       /// </summary>
@@ -101,8 +90,6 @@ namespace Com.MarcusTS.SmartDI
       ///    Resets the unit test container.
       /// </summary>
       void ResetUnitTestContainer();
-
-      #endregion Public Methods
    }
 
    /// <summary>
@@ -118,8 +105,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="ISmartDIContainerForUnitTesting" />
    public class SmartDIContainerForUnitTesting : SmartDIContainer, ISmartDIContainerForUnitTesting
    {
-      #region Public Constructors
-
       /// <summary>
       ///    Initializes a new instance of the <see cref="SmartDIContainerForUnitTesting" /> class.
       /// </summary>
@@ -127,10 +112,6 @@ namespace Com.MarcusTS.SmartDI
       {
          IsUnitTesting = true;
       }
-
-      #endregion Public Constructors
-
-      #region Public Properties
 
       /// <summary>
       ///    Gets the exposed global singletons.
@@ -142,15 +123,13 @@ namespace Com.MarcusTS.SmartDI
       ///    Gets the exposed registered type contracts.
       /// </summary>
       /// <value>The exposed registered type contracts.</value>
-      public IDictionary<Type, ITimeStampedCreatorAndStorageRules> ExposedRegisteredTypeContracts =>
-         _registeredTypeContracts;
+      public IDictionary<Type, ITimeStampedCreatorAndStorageRules> ExposedRegisteredTypeContracts => _registeredTypeContracts;
 
       /// <summary>
       ///    Gets the exposed shared instances with bound members.
       /// </summary>
       /// <value>The exposed shared instances with bound members.</value>
-      public IDictionary<object, List<object>> ExposedSharedInstancesWithBoundMembers =>
-         _sharedInstancesWithBoundMembers;
+      public IDictionary<object, List<object>> ExposedSharedInstancesWithBoundMembers => _sharedInstancesWithBoundMembers;
 
       /// <summary>
       ///    Gets or sets a value indicating whether [exposed throw on attempt to assign duplicate contract sub type].
@@ -184,10 +163,6 @@ namespace Com.MarcusTS.SmartDI
       /// <value>The is operation exception.</value>
       public string IsOperationException => IsOperationExceptionThrown;
 
-      #endregion Public Properties
-
-      #region Public Methods
-
       /// <summary>
       ///    Clears the unit test exceptions.
       /// </summary>
@@ -206,7 +181,5 @@ namespace Com.MarcusTS.SmartDI
          ThrowOnMultipleRegisteredTypesForOneResolvedType = false;
          ThrowOnAttemptToAssignDuplicateContractSubType   = false;
       }
-
-      #endregion Public Methods
    }
 }

@@ -2,19 +2,19 @@
 // <copyright file=SmartDIExtensions.cs company="Marcus Technical Services, Inc.">
 //     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
-// 
+//
 // MIT License
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all
 // copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,19 +26,17 @@
 
 namespace Com.MarcusTS.SmartDI
 {
+   using Com.MarcusTS.SharedUtils.Utils;
    using System;
    using System.Collections.Concurrent;
    using System.Collections.Generic;
    using System.Linq;
-   using Com.MarcusTS.SharedUtils.Utils;
 
    /// <summary>
    ///    Class SmartDIExtensions.
    /// </summary>
    public static class SmartDIExtensions
    {
-      #region Public Methods
-
       /// <summary>
       ///    Adds the or update.
       /// </summary>
@@ -382,7 +380,5 @@ namespace Com.MarcusTS.SmartDI
          var retInstance = diContainer.Resolve(typeof(T), storageRule, boundInstance, conflictResolver) as T;
          return retInstance;
       }
-
-      #endregion Public Methods
    }
 }

@@ -91,19 +91,10 @@
             <summary>
                Enum StorageRules
             </summary>
-            <summary>
-               Enum StorageRules
-            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.StorageRules.AnyAccessLevel">
             <summary>
                Default for class management; instantiates but does not store.
-            </summary>
-            <summary>
-               Any access level
-            </summary>
-            <summary>
-               Any access level
             </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.StorageRules.SharedDependencyBetweenInstances">
@@ -133,6 +124,13 @@
             <seealso cref="T:System.IDisposable" />
             <seealso cref="T:System.IDisposable" />
             <seealso cref="T:System.IDisposable" />
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors">
+            <summary>
+               Ignores (will not act upon) errors as long as true.
+            </summary>
+            <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.ISmartDIContainer.ContainerObjectIsDisappearing(System.Object)">
             <summary>
@@ -201,11 +199,6 @@
             <typeparam name="TParent">The generic parent type</typeparam>
             <param name="typesToUnregister">The types to remove.</param>
         </member>
-        <member name="P:Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors">
-            <summary>
-            Ignores (will not act upon) errors as long as true.
-            </summary>
-        </member>
         <member name="T:Com.MarcusTS.SmartDI.SmartDIContainer">
             <summary>
                Class SmartDIContainer.
@@ -216,35 +209,7 @@
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
-        </member>
-        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.#ctor(System.Boolean,System.Boolean)">
-            <summary>
-               Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
-            </summary>
-            <param name="throwOnMultipleRegisteredTypesForOneResolvedType">
-               if set to <c>true</c> [throw on multiple registered
-               types for one resolved type].
-            </param>
-            <param name="throwOnAttemptToAssignDuplicateContractSubType">
-               if set to <c>true</c> [throw on attempt to assign
-               duplicate contract sub type].
-            </param>
-        </member>
-        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsUnitTesting">
-            <summary>
-               Gets or sets a value indicating whether this instance is unit testing.
-            </summary>
-            <value><c>true</c> if this instance is unit testing, else <c>false</c>.</value>
-        </member>
-        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors">
-            <summary>
-            Ignores (will not act upon) errors as long as true.
-            </summary>
-        </member>
-        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.Finalize">
-            <summary>
-               Finalizes an instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
-            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
         </member>
         <member name="F:Com.MarcusTS.SmartDI.SmartDIContainer._globalSingletonsByType">
             <summary>
@@ -263,6 +228,19 @@
                instances reaches zero, the main instance is removed.
             </summary>
         </member>
+        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+               Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
+            </summary>
+            <param name="throwOnMultipleRegisteredTypesForOneResolvedType">
+               if set to <c>true</c> [throw on multiple registered
+               types for one resolved type].
+            </param>
+            <param name="throwOnAttemptToAssignDuplicateContractSubType">
+               if set to <c>true</c> [throw on attempt to assign
+               duplicate contract sub type].
+            </param>
+        </member>
         <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsArgumentExceptionThrown">
             <summary>
                Gets the is argument exception thrown.
@@ -274,6 +252,12 @@
                Gets the is operation exception thrown.
             </summary>
             <value>The is operation exception thrown.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsUnitTesting">
+            <summary>
+               Gets or sets a value indicating whether this instance is unit testing.
+            </summary>
+            <value><c>true</c> if this instance is unit testing, else <c>false</c>.</value>
         </member>
         <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.ThrowOnAttemptToAssignDuplicateContractSubType">
             <summary>
@@ -302,6 +286,12 @@
                THIS IS SLOPPY... so try to set this Boolean to True and make careful registrations.
             </summary>
             <value><c>true</c> if [throw on multiple registered types for one resolved type], else <c>false</c>.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors">
+            <summary>
+               Ignores (will not act upon) errors as long as true.
+            </summary>
+            <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.ContainerObjectIsDisappearing(System.Object)">
             <summary>
@@ -364,6 +354,11 @@
             </summary>
             <typeparam name="TParent">The generic parent type</typeparam>
             <param name="typesToUnregister">The types to remove.</param>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.Finalize">
+            <summary>
+               Finalizes an instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
+            </summary>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.ClearExceptions">
             <summary>
