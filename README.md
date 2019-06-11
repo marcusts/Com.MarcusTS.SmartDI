@@ -1,4 +1,4 @@
-## Finally, a DI Container Without The Fake "IOC" Swagger
+﻿## Finally, a DI Container Without The Fake "IOC" Swagger
 
 #### _It's just dependency injection - that's all, folks_
 

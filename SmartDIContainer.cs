@@ -70,7 +70,6 @@ namespace Com.MarcusTS.SmartDI
    /// <seealso cref="System.IDisposable" />
    /// <seealso cref="System.IDisposable" />
    /// <seealso cref="System.IDisposable" />
-   /// <seealso cref="System.IDisposable" />
    public interface ISmartDIContainer : IDisposable
    {
       /// <summary>
@@ -166,7 +165,6 @@ namespace Com.MarcusTS.SmartDI
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    /// <seealso cref="ISmartDIContainer" />
-   /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    /// <seealso cref="Com.MarcusTS.SmartDI.ISmartDIContainer" />
    public class SmartDIContainer : ISmartDIContainer

@@ -124,7 +124,6 @@
             <seealso cref="T:System.IDisposable" />
             <seealso cref="T:System.IDisposable" />
             <seealso cref="T:System.IDisposable" />
-            <seealso cref="T:System.IDisposable" />
         </member>
         <member name="P:Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors">
             <summary>
@@ -205,7 +204,6 @@
                Implements the <see cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
                Implements the <see cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             </summary>
-            <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
             <seealso cref="T:Com.MarcusTS.SmartDI.ISmartDIContainer" />
