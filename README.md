@@ -1,4 +1,4 @@
-﻿## Finally, a DI Container Without The Fake "IOC" Swagger
+## Finally, a DI Container Without The Fake "IOC" Swagger
 
 #### _It's just dependency injection - that's all, folks_
 
@@ -200,7 +200,7 @@ Your UI will be a lot more complicated. This sample shows how to use a single pa
 
 This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcusts.com/2018/05/01/taking-control-of-variable-lifecycle/)**, which is highly recommended.
 
-<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption=""><?xml version="1.0" encoding="utf-8" ?>
+<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">
 <pages:ContentPageWithLifecycle
    xmlns="http://xamarin.com/schemas/2014/forms"
    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
