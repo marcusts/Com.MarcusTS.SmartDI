@@ -1,4 +1,4 @@
-## Finally, a DI Container Without The Fake "IOC" Swagger
+﻿## Finally, a DI Container Without The Fake "IOC" Swagger
 
 #### _It's just dependency injection - that's all, folks_
 
@@ -63,7 +63,7 @@ We actually added comments! _(And we were not struck by lightning)_
 
 #### 6\. It is tested and proven
 
-See the [unit tests](https://github.com/marcusts/SmartDI.MSTests).
+See the [unit tests](https://github.com/marcusts/SafeDiContainer).
 
 ## Quick Start
 
@@ -200,7 +200,8 @@ Your UI will be a lot more complicated. This sample shows how to use a single pa
 
 This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcusts.com/2018/05/01/taking-control-of-variable-lifecycle/)**, which is highly recommended.
 
-<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption=""><pages:ContentPageWithLifecycle
+<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption=""><?xml version="1.0" encoding="utf-8" ?>
+<pages:ContentPageWithLifecycle
    xmlns="http://xamarin.com/schemas/2014/forms"
    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
    xmlns:pages="clr-namespace:Com.MarcusTS.LifecycleAware.Views.Pages;assembly=Com.MarcusTS.LifecycleAware"
@@ -254,7 +255,7 @@ This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcust
 
 #### Create a State Machine to Navigate As Well as to Determine What Page goes with What View Model at that Instant
 
-<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">public static class StateMachine
+<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">   public static class StateMachine
    {
       public enum PageModes
       {

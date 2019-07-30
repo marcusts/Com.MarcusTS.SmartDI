@@ -29,7 +29,7 @@ The SmartDI Container is unique in that it:
 
 ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.15.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.15")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smart DI Container")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Com.MarcusTS.SmartDI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.15.0")]

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Com.MarcusTS.SharedUtils/1.0.10": {
+      "Com.MarcusTS.SharedUtils/1.0.11": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll": {}
@@ -38,14 +38,14 @@
     }
   },
   "libraries": {
-    "Com.MarcusTS.SharedUtils/1.0.10": {
-      "sha512": "5sKqdX54Eh0Hpht9zV9NHAoWKooqVg8Z6blQSnqKqjPo0QdgkAq/GoToJsQ8WtwnIJ7pBDZPB8H0fLDn9XAyqg==",
+    "Com.MarcusTS.SharedUtils/1.0.11": {
+      "sha512": "o2mQ5i1yf4RAe56fYnF7z9T/SZZ43SoCEL03uWd39YjhUBg8KtxyWuEhdn3hmJDHEEDyd6/YENin6/lBM7rTaQ==",
       "type": "package",
-      "path": "com.marcusts.sharedutils/1.0.10",
+      "path": "com.marcusts.sharedutils/1.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "com.marcusts.sharedutils.1.0.10.nupkg.sha512",
+        "com.marcusts.sharedutils.1.0.11.nupkg.sha512",
         "com.marcusts.sharedutils.nuspec",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.xml"
@@ -197,7 +197,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Com.MarcusTS.SharedUtils >= 1.0.10",
+      "Com.MarcusTS.SharedUtils >= 1.0.11",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -207,7 +207,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.14",
+    "version": "1.0.15",
     "restore": {
       "projectUniqueName": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
       "projectName": "Com.MarcusTS.SmartDI",
@@ -247,7 +247,7 @@
         "dependencies": {
           "Com.MarcusTS.SharedUtils": {
             "target": "Package",
-            "version": "[1.0.10, )"
+            "version": "[1.0.11, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -257,7 +257,12 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true
