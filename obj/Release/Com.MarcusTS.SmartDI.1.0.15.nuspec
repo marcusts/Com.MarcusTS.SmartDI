@@ -22,7 +22,7 @@ The SmartDI Container is unique in that it:
     <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
-        <dependency id="Com.MarcusTS.SharedUtils" version="1.0.11" exclude="Build,Analyzers" />
+        <dependency id="Com.MarcusTS.SharedUtils" version="1.0.12" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>

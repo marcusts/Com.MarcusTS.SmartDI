@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Com.MarcusTS.SmartDI</id>
+    <version>1.0.15</version>
+    <authors>Stephen Marcus</authors>
+    <owners>Stephen Marcus</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A container that creates and then (optionally) stores variables to provide caching and centralized access.
+
+These sorts of containers are sometimes misdescribed as IOC ("Inversion of Control") Containers. Since they do not provide any control over program flow, the accurate term is DI ("Dependency Injection") Container.
+
+The SmartDI Container is unique in that it:
+
+* Does not store instantiated objects unnecessarily.
+
+* Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to implement an interface.
+
+* Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.</description>
+    <releaseNotes>Bug fixes.</releaseNotes>
+    <copyright>@2019 Marcus Technical Services, Inc.</copyright>
+    <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Com.MarcusTS.SharedUtils" version="1.0.12" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="M:\MyDocs\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.dll" target="lib\netstandard2.0\Com.MarcusTS.SmartDI.dll" />
+    <file src="M:\MyDocs\Dev\MtsShared\SmartDI\bin\Debug\netstandard2.0\Com.MarcusTS.SmartDI.xml" target="lib\netstandard2.0\Com.MarcusTS.SmartDI.xml" />
+  </files>
+</package>

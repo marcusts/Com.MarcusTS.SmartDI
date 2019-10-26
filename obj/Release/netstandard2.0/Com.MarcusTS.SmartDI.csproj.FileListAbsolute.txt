@@ -5,7 +5,6 @@ M:\MyDocs\Dev\MtsShared\SmartDI\bin\Release\netstandard2.0\license.txt
 M:\MyDocs\Dev\MtsShared\SmartDI\bin\Release\netstandard2.0\Com.MarcusTS.SmartDI.deps.json
 M:\MyDocs\Dev\MtsShared\SmartDI\bin\Release\netstandard2.0\Com.MarcusTS.SmartDI.dll
 M:\MyDocs\Dev\MtsShared\SmartDI\bin\Release\netstandard2.0\Com.MarcusTS.SmartDI.pdb
-M:\MyDocs\Dev\MtsShared\SmartDI\obj\Release\netstandard2.0\Com.MarcusTS.SmartDI.csproj.CoreCompileInputs.cache
 M:\MyDocs\Dev\MtsShared\SmartDI\obj\Release\netstandard2.0\Com.MarcusTS.SmartDI.AssemblyInfoInputs.cache
 M:\MyDocs\Dev\MtsShared\SmartDI\obj\Release\netstandard2.0\Com.MarcusTS.SmartDI.AssemblyInfo.cs
 M:\MyDocs\Dev\MtsShared\SmartDI\obj\Release\netstandard2.0\Com.MarcusTS.SmartDI.dll

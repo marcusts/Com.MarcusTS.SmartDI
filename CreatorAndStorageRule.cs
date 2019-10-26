@@ -1,62 +1,62 @@
-﻿// *********************************************************************************
-// <copyright file=CreatorAndStorageRule.cs company="Marcus Technical Services, Inc.">
-//     Copyright @2019 Marcus Technical Services, Inc.
-// </copyright>
+﻿#region License
+
+// Copyright (c) 2019  Marcus Technical Services, Inc. <marcus@marcusts.com>
 //
-// MIT License
+// This file, CreatorAndStorageRule.cs, is a part of a program called AccountViewMobile.
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+// AccountViewMobile is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 //
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// Permission to use, copy, modify, and/or distribute this software
+// for any purpose with or without fee is hereby granted, provided
+// that the above copyright notice and this permission notice appear
+// in all copies.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-// *********************************************************************************
+// AccountViewMobile is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// For the complete GNU General Public License,
+// see <http://www.gnu.org/licenses/>.
+
+#endregion
 
 namespace Com.MarcusTS.SmartDI
 {
    using System;
 
    /// <summary>
-   ///    Interface IProvideCreatorAndStorageRule
+   /// Interface IProvideCreatorAndStorageRule
    /// </summary>
    public interface IProvideCreatorAndStorageRule
    {
       /// <summary>
-      ///    Gets or sets the provided creator.
+      /// Gets or sets the provided creator.
       /// </summary>
       /// <value>The provided creator.</value>
       Func<object> ProvidedCreator { get; set; }
 
       /// <summary>
-      ///    Gets or sets the provided storage rule.
+      /// Gets or sets the provided storage rule.
       /// </summary>
       /// <value>The provided storage rule.</value>
       StorageRules ProvidedStorageRule { get; set; }
    }
 
    /// <summary>
-   ///    Class CreatorAndStorageRule.
-   ///    Implements the <see cref="IProvideCreatorAndStorageRule" />
-   ///    Implements the <see cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
+   /// Class CreatorAndStorageRule.
+   /// Implements the <see cref="IProvideCreatorAndStorageRule" />
+   /// Implements the <see cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule" />
    /// <seealso cref="IProvideCreatorAndStorageRule" />
    public class CreatorAndStorageRule : IProvideCreatorAndStorageRule
    {
       /// <summary>
-      ///    Initializes a new instance of the <see cref="CreatorAndStorageRule" /> class.
+      /// Initializes a new instance of the <see cref="CreatorAndStorageRule" /> class.
       /// </summary>
       /// <param name="creator">The creator.</param>
       /// <param name="storageRule">The storage rule.</param>
@@ -72,13 +72,13 @@ namespace Com.MarcusTS.SmartDI
       }
 
       /// <summary>
-      ///    Gets or sets the provided creator.
+      /// Gets or sets the provided creator.
       /// </summary>
       /// <value>The provided creator.</value>
       public Func<object> ProvidedCreator { get; set; }
 
       /// <summary>
-      ///    Gets or sets the provided storage rule.
+      /// Gets or sets the provided storage rule.
       /// </summary>
       /// <value>The provided storage rule.</value>
       public StorageRules ProvidedStorageRule { get; set; }
