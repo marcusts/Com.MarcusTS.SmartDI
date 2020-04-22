@@ -5,7 +5,7 @@
   },
   "projects": {
     "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj": {
-      "version": "1.0.16",
+      "version": "1.0.17",
       "restore": {
         "projectUniqueName": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
         "projectName": "Com.MarcusTS.SmartDI",
@@ -45,7 +45,7 @@
           "dependencies": {
             "Com.MarcusTS.SharedUtils": {
               "target": "Package",
-              "version": "[1.0.12, )"
+              "version": "[1.0.13, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -64,7 +64,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015095\\RuntimeIdentifierGraph.json"
         }
       }
     }

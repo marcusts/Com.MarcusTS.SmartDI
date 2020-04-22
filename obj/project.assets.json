@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Com.MarcusTS.SharedUtils/1.0.12": {
+      "Com.MarcusTS.SharedUtils/1.0.13": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.2.0.778463"
+          "Xamarin.Forms": "4.0.0.425677"
         },
         "compile": {
           "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll": {}
@@ -38,7 +38,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Xamarin.Forms/4.2.0.778463": {
+      "Xamarin.Forms/4.0.0.425677": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -57,14 +57,14 @@
     }
   },
   "libraries": {
-    "Com.MarcusTS.SharedUtils/1.0.12": {
-      "sha512": "IMtmqk2myU4mBsnwgWW5NCCIjbQaWYn/2Xfps5kouLN2s7b6DT5wKtEFKRK5gUtigo42607y26or52EfWsU+Aw==",
+    "Com.MarcusTS.SharedUtils/1.0.13": {
+      "sha512": "xlcYgr6CSEx9ZTqmmMbyDrOIkpuHqFbfhzKz2KjUeNMJm37YNc6E6182I1uI+rto1RgiS9zbYRf6qnOqGjP+iQ==",
       "type": "package",
-      "path": "com.marcusts.sharedutils/1.0.12",
+      "path": "com.marcusts.sharedutils/1.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "com.marcusts.sharedutils.1.0.12.nupkg.sha512",
+        "com.marcusts.sharedutils.1.0.13.nupkg.sha512",
         "com.marcusts.sharedutils.nuspec",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.xml"
@@ -213,10 +213,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Xamarin.Forms/4.2.0.778463": {
-      "sha512": "0dGuPOn9KrS65rmVgOrV5knDYHxWkWEm7c/CLp6AKSlvOpZ40+YrN+7oX5hHE6lpX+dizLCaOE/RvYS3ONy9/Q==",
+    "Xamarin.Forms/4.0.0.425677": {
+      "sha512": "drwO/MimaMUnmvkULASYjU5MRciVIJyiLxD3ihFq8P+DWynQZ2NLNej0Vrs3k2L7UdmqvcgCxEJdfT7uFl2KVg==",
       "type": "package",
-      "path": "xamarin.forms/4.2.0.778463",
+      "path": "xamarin.forms/4.0.0.425677",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -320,7 +320,6 @@
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll.mdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
@@ -437,13 +436,12 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/CollectionView/ItemsViewStyles.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Items/ItemsViewStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
@@ -456,14 +454,14 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.2.0.778463.nupkg.sha512",
+        "xamarin.forms.4.0.0.425677.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Com.MarcusTS.SharedUtils >= 1.0.12",
+      "Com.MarcusTS.SharedUtils >= 1.0.13",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -473,7 +471,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.16",
+    "version": "1.0.17",
     "restore": {
       "projectUniqueName": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
       "projectName": "Com.MarcusTS.SmartDI",
@@ -513,7 +511,7 @@
         "dependencies": {
           "Com.MarcusTS.SharedUtils": {
             "target": "Package",
-            "version": "[1.0.12, )"
+            "version": "[1.0.13, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -532,7 +530,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015095\\RuntimeIdentifierGraph.json"
       }
     }
   }

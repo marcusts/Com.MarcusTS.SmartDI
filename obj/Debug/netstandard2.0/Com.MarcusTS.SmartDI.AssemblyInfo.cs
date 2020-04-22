@@ -14,20 +14,21 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Marcus Technical Services, Inc.")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("@2019 Marcus Technical Services, Inc.")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute(@"A container that creates and then (optionally) stores variables to provide caching and centralized access.
+[assembly: System.Reflection.AssemblyDescriptionAttribute(@"
+         A container that creates and then (optionally) stores variables to provide caching and centralized access.
 
-These sorts of containers are sometimes misdescribed as IOC (""Inversion of Control"") Containers. Since they do not provide any control over program flow, the accurate term is DI (""Dependency Injection"") Container.
+         These sorts of containers are sometimes misdescribed as IOC (""Inversion of Control"") Containers. Since they do not provide any control over program flow, the accurate term is DI (""Dependency Injection"") Container.
 
-The SmartDI Container is unique in that it:
+         The SmartDI Container is unique in that it:
 
-* Does not store instantiated objects unnecessarily.
+         * Does not store instantiated objects unnecessarily.
 
-* Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to implement an interface.
+         * Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to implement an interface.
 
-* Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.
+         * Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.
 
 
-")]
+      ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.16.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.16")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smart DI Container")]
