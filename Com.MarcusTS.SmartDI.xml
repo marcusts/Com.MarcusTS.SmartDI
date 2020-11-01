@@ -246,6 +246,18 @@
                duplicate contract sub type].
             </param>
         </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors">
+            <summary>
+               Ignores (will not act upon) errors as long as true.
+            </summary>
+            <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreResolveError">
+            <summary>
+               Ignores (will not act upon) a resolve error as long as true.
+            </summary>
+            <value><c>true</c> if [ignore resolve errors]; otherwise, <c>false</c>.</value>
+        </member>
         <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IsArgumentExceptionThrown">
             <summary>
                Gets the is argument exception thrown.
@@ -291,18 +303,6 @@
                THIS IS SLOPPY... so try to set this Boolean to True and make careful registrations.
             </summary>
             <value><c>true</c> if [throw on multiple registered types for one resolved type], else <c>false</c>.</value>
-        </member>
-        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors">
-            <summary>
-               Ignores (will not act upon) errors as long as true.
-            </summary>
-            <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreResolveError">
-            <summary>
-               Ignores (will not act upon) a resolve error as long as true.
-            </summary>
-            <value><c>true</c> if [ignore resolve errors]; otherwise, <c>false</c>.</value>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.ContainerObjectIsDisappearing(System.Object)">
             <summary>
@@ -365,11 +365,6 @@
             </summary>
             <typeparam name="TParent">The generic parent type</typeparam>
             <param name="typesToUnregister">The types to remove.</param>
-        </member>
-        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.Finalize">
-            <summary>
-               Finalizes an instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
-            </summary>
         </member>
         <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.ClearExceptions">
             <summary>
@@ -510,6 +505,11 @@
             <param name="message">The message.</param>
             <exception cref="T:System.InvalidOperationException"></exception>
             <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.SmartDIContainer.Finalize">
+            <summary>
+               Finalizes an instance of the <see cref="T:Com.MarcusTS.SmartDI.SmartDIContainer" /> class.
+            </summary>
         </member>
         <member name="T:Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting">
             <summary>

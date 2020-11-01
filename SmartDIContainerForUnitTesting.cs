@@ -155,7 +155,7 @@
          ResetContainer();
 
          ThrowOnMultipleRegisteredTypesForOneResolvedType = false;
-         ThrowOnAttemptToAssignDuplicateContractSubType   = false;
+         ThrowOnAttemptToAssignDuplicateContractSubType = false;
       }
    }
 }

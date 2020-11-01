@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Com.MarcusTS.SharedUtils/1.0.13": {
+      "Com.MarcusTS.SharedUtils/1.0.16": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "4.0.0.425677"
@@ -57,14 +57,14 @@
     }
   },
   "libraries": {
-    "Com.MarcusTS.SharedUtils/1.0.13": {
-      "sha512": "xlcYgr6CSEx9ZTqmmMbyDrOIkpuHqFbfhzKz2KjUeNMJm37YNc6E6182I1uI+rto1RgiS9zbYRf6qnOqGjP+iQ==",
+    "Com.MarcusTS.SharedUtils/1.0.16": {
+      "sha512": "ig2AbAAFOq6sFJlj2VxKTevyaLSL9bFpGuDmbLnUaHENojTEAkDWGZ1E74ZhPWaKthRJfWZNfyOk8Mi6TU47ng==",
       "type": "package",
-      "path": "com.marcusts.sharedutils/1.0.13",
+      "path": "com.marcusts.sharedutils/1.0.16",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "com.marcusts.sharedutils.1.0.13.nupkg.sha512",
+        "com.marcusts.sharedutils.1.0.16.nupkg.sha512",
         "com.marcusts.sharedutils.nuspec",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll",
         "lib/netstandard2.0/Com.MarcusTS.SharedUtils.xml"
@@ -91,6 +91,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -461,30 +462,27 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Com.MarcusTS.SharedUtils >= 1.0.13",
+      "Com.MarcusTS.SharedUtils >= 1.0.16",
       "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
     "C:\\Users\\steph\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.17",
+    "version": "1.0.21",
     "restore": {
-      "projectUniqueName": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
+      "projectUniqueName": "m:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
       "projectName": "Com.MarcusTS.SmartDI",
-      "projectPath": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
+      "projectPath": "m:\\MyDocs\\Dev\\MtsShared\\SmartDI\\Com.MarcusTS.SmartDI.csproj",
       "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-      "outputPath": "M:\\MyDocs\\Dev\\MtsShared\\SmartDI\\obj\\",
+      "outputPath": "m:\\MyDocs\\Dev\\MtsShared\\SmartDI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "M:\\MyDocs\\Dev\\NuGet.Config",
         "C:\\Users\\steph\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -493,10 +491,12 @@
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -508,10 +508,11 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Com.MarcusTS.SharedUtils": {
             "target": "Package",
-            "version": "[1.0.13, )"
+            "version": "[1.0.16, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -530,7 +531,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300-preview-015095\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
       }
     }
   }

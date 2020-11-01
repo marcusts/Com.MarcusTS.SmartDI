@@ -30,9 +30,9 @@
       <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>1.0.17</Version>
-      <AssemblyVersion>1.0.17.0</AssemblyVersion>
-      <FileVersion>1.0.17.0</FileVersion>
+      <Version>1.0.21</Version>
+      <AssemblyVersion>1.0.21.0</AssemblyVersion>
+      <FileVersion>1.0.21.0</FileVersion>
       <SignAssembly>false</SignAssembly>
       <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
       <DelaySign>false</DelaySign>
@@ -55,7 +55,7 @@
    </ItemGroup>
 
    <ItemGroup>
-     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.13" />
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.16" />
    </ItemGroup>
 
    <ItemGroup>

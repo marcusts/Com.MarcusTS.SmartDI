@@ -1,11 +1,11 @@
 ﻿namespace Com.MarcusTS.SmartDI
 {
+   using Com.MarcusTS.SharedUtils.Utils;
    using System;
    using System.Collections.Concurrent;
    using System.Collections.Generic;
    using System.Diagnostics;
    using System.Linq;
-   using Com.MarcusTS.SharedUtils.Utils;
 
    /// <summary>
    ///    Enum StorageRules
@@ -91,7 +91,7 @@
       /// <param name="creatorsAndRules">The list of class creators and rules. The creators can be null.</param>
       void RegisterTypeContracts
       (
-         Type                                             classT,
+         Type classT,
          IDictionary<Type, IProvideCreatorAndStorageRule> creatorsAndRules
       );
 
@@ -123,9 +123,9 @@
       /// <returns>An object which *must* then be cast as the type requested by the *caller*.</returns>
       object Resolve
       (
-         Type         typeRequestedT,
-         StorageRules storageRule   = StorageRules.AnyAccessLevel,
-         object       boundInstance = null,
+         Type typeRequestedT,
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         object boundInstance = null,
          Func<ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution>
             conflictResolver =
             null
@@ -183,12 +183,24 @@
       public SmartDIContainer
       (
          bool throwOnMultipleRegisteredTypesForOneResolvedType = false,
-         bool throwOnAttemptToAssignDuplicateContractSubType   = false
+         bool throwOnAttemptToAssignDuplicateContractSubType = false
       )
       {
          ThrowOnMultipleRegisteredTypesForOneResolvedType = throwOnMultipleRegisteredTypesForOneResolvedType;
-         ThrowOnAttemptToAssignDuplicateContractSubType   = throwOnAttemptToAssignDuplicateContractSubType;
+         ThrowOnAttemptToAssignDuplicateContractSubType = throwOnAttemptToAssignDuplicateContractSubType;
       }
+
+      /// <summary>
+      ///    Ignores (will not act upon) errors as long as true.
+      /// </summary>
+      /// <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
+      public bool IgnoreAllErrors { get; set; }
+
+      /// <summary>
+      ///    Ignores (will not act upon) a resolve error as long as true.
+      /// </summary>
+      /// <value><c>true</c> if [ignore resolve errors]; otherwise, <c>false</c>.</value>
+      public bool IgnoreResolveError { get; set; }
 
       /// <summary>
       ///    Gets the is argument exception thrown.
@@ -235,18 +247,6 @@
       /// </summary>
       /// <value><c>true</c> if [throw on multiple registered types for one resolved type], else <c>false</c>.</value>
       protected bool ThrowOnMultipleRegisteredTypesForOneResolvedType { get; set; }
-
-      /// <summary>
-      ///    Ignores (will not act upon) errors as long as true.
-      /// </summary>
-      /// <value><c>true</c> if [ignore all errors]; otherwise, <c>false</c>.</value>
-      public bool IgnoreAllErrors { get; set; }
-
-      /// <summary>
-      ///    Ignores (will not act upon) a resolve error as long as true.
-      /// </summary>
-      /// <value><c>true</c> if [ignore resolve errors]; otherwise, <c>false</c>.</value>
-      public bool IgnoreResolveError { get; set; }
 
       /// <summary>
       ///    Called by the deriver whenever a class is about to disappear from view. It is better to call this before the
@@ -312,7 +312,7 @@
       /// <param name="creatorsAndRules">The list of class creators and rules. The creators can be null.</param>
       public void RegisterTypeContracts
       (
-         Type                                             classT,
+         Type classT,
          IDictionary<Type, IProvideCreatorAndStorageRule> creatorsAndRules
       )
       {
@@ -367,8 +367,8 @@
                ThrowArgumentException(nameof(RegisterTypeContracts),
                                       "Cannot register a second contract when the property ->" +
                                       nameof(ThrowOnMultipleRegisteredTypesForOneResolvedType) +
-                                      "< is true.  The competing contract is of type ->"       +
-                                      competingContracts                                       +
+                                      "< is true.  The competing contract is of type ->" +
+                                      competingContracts +
                                       "<-");
                return;
             }
@@ -381,7 +381,7 @@
          {
             _registeredTypeContracts.Add(classT,
                                          new TimeStampedCreatorAndStorageRules
-                                            {WhenAdded = DateTime.Now, CreatorsAndStorageRules = creatorsAndRules});
+                                         { WhenAdded = DateTime.Now, CreatorsAndStorageRules = creatorsAndRules });
          }
          else
          {
@@ -408,9 +408,9 @@
       /// <returns>System.Object.</returns>
       public object Resolve
       (
-         Type         typeRequestedT,
+         Type typeRequestedT,
          StorageRules ruleRequested = StorageRules.AnyAccessLevel,
-         object       boundParent   = null,
+         object boundParent = null,
          Func<ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution>
             conflictResolver =
             null
@@ -451,9 +451,9 @@
             if (storageMatchedQualifyingRegistrations.IsEmpty())
             {
                ThrowArgumentException(nameof(Resolve), "Cannot find a registration for the type ->" +
-                                                       typeRequestedT                               +
-                                                       "<- using storage rule ->"                   +
-                                                       ruleRequested                                + "<-",
+                                                       typeRequestedT +
+                                                       "<- using storage rule ->" +
+                                                       ruleRequested + "<-",
                                       true);
                return null;
             }
@@ -479,7 +479,7 @@
                                     ref resolutionToSeek))
          {
             ThrowOperationException(nameof(Resolve), "Cannot determine which one of " +
-                                                     qualifyingRegistrations.Count    +
+                                                     qualifyingRegistrations.Count +
                                                      " registrations to use through the provided conflict resolver.");
             return null;
          }
@@ -514,7 +514,7 @@
          if (!qualifyingMasterType.IsTypeOrAssignableFromType(typeRequestedT))
          {
             ThrowOperationException(nameof(Resolve), "Cannot save an instance of ->" + qualifyingMasterType +
-                                                     "<- as ->"                      + typeRequestedT       + "<-");
+                                                     "<- as ->" + typeRequestedT + "<-");
             return null;
          }
 
@@ -575,7 +575,7 @@
             if (foundSharedInstances.IsNotAnEqualObjectTo(default(KeyValuePair<object, List<object>>)))
             {
                // Add our bound object to the list... maybe make sure it's not there already..
-               // Also ensure that we are not trying to bind the foundSharedInstances.kKey --
+               // Also ensure that we are not trying to bind the foundSharedInstances.Key --
                //    that is the instance being returned, so cannot act as its own parent.
 
                // This is a critical error, so wil throw rather than return a value.
@@ -587,12 +587,13 @@
                   return null;
                }
 
-               // If the bound parent is already there, do not ree-add it.
+               // If the bound parent is already there, do not re-add it.
                var parentIsAlreadyStored = foundSharedInstances.Value.Any(existingBoundParent =>
                                                                              ReferenceEquals(existingBoundParent,
                                                                                              boundParent));
                if (!parentIsAlreadyStored)
                {
+                  // ReSharper disable once AssignNullToNotNullAttribute
                   _sharedInstancesWithBoundMembers[foundSharedInstances.Key].Add(boundParent);
                }
 
@@ -686,19 +687,11 @@
       }
 
       /// <summary>
-      ///    Finalizes an instance of the <see cref="SmartDIContainer" /> class.
-      /// </summary>
-      ~SmartDIContainer()
-      {
-         Dispose(false);
-      }
-
-      /// <summary>
       ///    Clears the exceptions.
       /// </summary>
       protected void ClearExceptions()
       {
-         IsArgumentExceptionThrown  = string.Empty;
+         IsArgumentExceptionThrown = string.Empty;
          IsOperationExceptionThrown = string.Empty;
       }
 
@@ -713,8 +706,8 @@
       /// <param name="boundParents">The bound member. Each of these are a different "parent" to the same shared instance.</param>
       protected void CreateSharedInstances
       (
-         object          sharedInstance,
-         Type            sharedInstanceType,
+         object sharedInstance,
+         Type sharedInstanceType,
          params object[] boundParents
       )
       {
@@ -744,7 +737,7 @@
       protected void CreateSingletonInstance
       (
          object instance,
-         Type   typeToSaveAs
+         Type typeToSaveAs
       )
       {
          if (!_globalSingletonsByType.ContainsKey(typeToSaveAs))
@@ -797,8 +790,8 @@
             sharedInstanceIdx < _sharedInstancesWithBoundMembers.Count;
             sharedInstanceIdx++)
          {
-            var keyToSeek         = _sharedInstancesWithBoundMembers.Keys.ToList()[sharedInstanceIdx];
-            var sharedInstance    = _sharedInstancesWithBoundMembers[keyToSeek];
+            var keyToSeek = _sharedInstancesWithBoundMembers.Keys.ToList()[sharedInstanceIdx];
+            var sharedInstance = _sharedInstancesWithBoundMembers[keyToSeek];
             var foundBoundMembers = sharedInstance.Where(si => ReferenceEquals(si, obj)).ToArray();
 
             if (!foundBoundMembers.Any())
@@ -900,21 +893,21 @@
       /// <returns><c>true</c> if a valid registration is found, else <c>false</c>.</returns>
       private bool CannotFindObviousChoice
       (
-         Type                                                           typeRequestedT,
+         Type typeRequestedT,
          ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules> registrations,
-         ref KeyValuePair<Type, IProvideCreatorAndStorageRule>          resolutionToSeek
+         ref KeyValuePair<Type, IProvideCreatorAndStorageRule> resolutionToSeek
       )
       {
          // Sort by date/time added, then select
          var foundDict = registrations.OrderBy(qr => qr.Value.WhenAdded).First().Value;
-         var found     = false;
+         var found = false;
 
          foreach (var keyValuePair in foundDict.CreatorsAndStorageRules)
          {
             if (keyValuePair.Key == typeRequestedT)
             {
                resolutionToSeek = keyValuePair;
-               found            = true;
+               found = true;
                break;
             }
          }
@@ -936,7 +929,7 @@
          Func<ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver,
          ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>
             qualifyingRegistrations,
-         ref Type                                              qualifyingMasterType,
+         ref Type qualifyingMasterType,
          ref KeyValuePair<Type, IProvideCreatorAndStorageRule> resolutionToSeek
       )
       {
@@ -947,7 +940,7 @@
             if (masterResolution != null)
             {
                qualifyingMasterType = masterResolution.MasterType;
-               resolutionToSeek     = masterResolution.TypeToCastWithStorageRule;
+               resolutionToSeek = masterResolution.TypeToCastWithStorageRule;
             }
 
             if (masterResolution == null
@@ -972,7 +965,7 @@
       /// <returns><c>true</c> if object was created successfully, else <c>false</c>.</returns>
       private bool CouldNotCreateObject
       (
-         Type       qualifyingMasterType,
+         Type qualifyingMasterType,
          ref object instantiatedObject
       )
       {
@@ -1010,7 +1003,7 @@
                   break;
                }
 
-               var parameters  = new List<object>();
+               var parameters = new List<object>();
                var skipThisOne = false;
 
                foreach (var parameterInfo in constructorParameters)
@@ -1020,13 +1013,13 @@
                   try
                   {
                      variableToInjectAsParameter = Resolve(parameterInfo.ParameterType);
-                     skipThisOne                 = variableToInjectAsParameter == null;
+                     skipThisOne = variableToInjectAsParameter == null;
                   }
                   catch (Exception)
                   {
                      // If we threw, then this constructor will not work
                      Debug.WriteLine("SmartDIContainer: Resolve: Exception on attempt to instantiate " +
-                                     qualifyingMasterType                                              +
+                                     qualifyingMasterType +
                                      " using one of its constructors. Will try another constructor...");
                      skipThisOne = true;
                   }
@@ -1076,7 +1069,7 @@
             qualifyingRegistrations.AddOrUpdate(contract.Key,
                                                 new TimeStampedCreatorAndStorageRules
                                                 {
-                                                   WhenAdded               = contract.Value.WhenAdded,
+                                                   WhenAdded = contract.Value.WhenAdded,
                                                    CreatorsAndStorageRules = contract.Value.CreatorsAndStorageRules
                                                 });
 
@@ -1092,8 +1085,8 @@
             if (ThrowOnMultipleRegisteredTypesForOneResolvedType)
             {
                ThrowArgumentException(nameof(Resolve),
-                                      "Too many contracts ("         + qualifyingRegistrations.Count +
-                                      ") for the resolvable type ->" + typeRequestedT                + "<-");
+                                      "Too many contracts (" + qualifyingRegistrations.Count +
+                                      ") for the resolvable type ->" + typeRequestedT + "<-");
                return qualifyingRegistrations;
             }
          }
@@ -1111,8 +1104,8 @@
       private bool ProvidedCreatorFailed
       (
          KeyValuePair<Type, IProvideCreatorAndStorageRule> resolutionToSeek,
-         Type                                              finalTypeRequestedT,
-         ref object                                        instantiatedObject
+         Type finalTypeRequestedT,
+         ref object instantiatedObject
       )
       {
          if (resolutionToSeek.Value.ProvidedCreator != null)
@@ -1174,8 +1167,8 @@
                   ThrowArgumentException(nameof(RegisterTypeContracts),
                                          "Cannot replace an existing type and storage rule contract.  Pleased remove the old one first.  Type ->" +
                                          existingTypeContract
-                                           .Key                                         +
-                                         "<- storage rule ->"                           +
+                                           .Key +
+                                         "<- storage rule ->" +
                                          existingTypeContract.Value.ProvidedStorageRule +
                                          "<-");
                }
@@ -1205,7 +1198,7 @@
       (
          string methodName,
          string message,
-         bool   isResolveCase = false
+         bool isResolveCase = false
       )
       {
          if (IgnoreAllErrors || isResolveCase && IgnoreResolveError)
@@ -1253,6 +1246,14 @@
          {
             throw new InvalidOperationException(finalMessage);
          }
+      }
+
+      /// <summary>
+      ///    Finalizes an instance of the <see cref="SmartDIContainer" /> class.
+      /// </summary>
+      ~SmartDIContainer()
+      {
+         Dispose(false);
       }
    }
 }

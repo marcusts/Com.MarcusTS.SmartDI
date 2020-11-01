@@ -36,7 +36,7 @@
       /// <param name="storageRule">The storage rule.</param>
       public CreatorAndStorageRule
       (
-         Func<object> creator     = null,
+         Func<object> creator = null,
          StorageRules storageRule = StorageRules.AnyAccessLevel
       )
       {

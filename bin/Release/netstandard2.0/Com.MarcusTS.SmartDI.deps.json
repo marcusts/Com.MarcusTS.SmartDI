@@ -7,23 +7,23 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Com.MarcusTS.SmartDI/1.0.17": {
+      "Com.MarcusTS.SmartDI/1.0.21": {
         "dependencies": {
-          "Com.MarcusTS.SharedUtils": "1.0.13",
+          "Com.MarcusTS.SharedUtils": "1.0.16",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
           "Com.MarcusTS.SmartDI.dll": {}
         }
       },
-      "Com.MarcusTS.SharedUtils/1.0.13": {
+      "Com.MarcusTS.SharedUtils/1.0.16": {
         "dependencies": {
           "Xamarin.Forms": "4.0.0.425677"
         },
         "runtime": {
           "lib/netstandard2.0/Com.MarcusTS.SharedUtils.dll": {
-            "assemblyVersion": "1.0.13.0",
-            "fileVersion": "1.0.13.0"
+            "assemblyVersion": "1.0.16.0",
+            "fileVersion": "1.0.16.0"
           }
         }
       },
@@ -52,17 +52,17 @@
     }
   },
   "libraries": {
-    "Com.MarcusTS.SmartDI/1.0.17": {
+    "Com.MarcusTS.SmartDI/1.0.21": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Com.MarcusTS.SharedUtils/1.0.13": {
+    "Com.MarcusTS.SharedUtils/1.0.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xlcYgr6CSEx9ZTqmmMbyDrOIkpuHqFbfhzKz2KjUeNMJm37YNc6E6182I1uI+rto1RgiS9zbYRf6qnOqGjP+iQ==",
-      "path": "com.marcusts.sharedutils/1.0.13",
-      "hashPath": "com.marcusts.sharedutils.1.0.13.nupkg.sha512"
+      "sha512": "sha512-ig2AbAAFOq6sFJlj2VxKTevyaLSL9bFpGuDmbLnUaHENojTEAkDWGZ1E74ZhPWaKthRJfWZNfyOk8Mi6TU47ng==",
+      "path": "com.marcusts.sharedutils/1.0.16",
+      "hashPath": "com.marcusts.sharedutils.1.0.16.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

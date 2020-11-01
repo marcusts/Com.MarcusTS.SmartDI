@@ -1,10 +1,10 @@
 ﻿namespace Com.MarcusTS.SmartDI
 {
+   using Com.MarcusTS.SharedUtils.Utils;
    using System;
    using System.Collections.Concurrent;
    using System.Collections.Generic;
    using System.Linq;
-   using Com.MarcusTS.SharedUtils.Utils;
 
    /// <summary>
    ///    Class SmartDIExtensions.
@@ -20,8 +20,8 @@
       public static void AddOrUpdate
       (
          this ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules> retDict,
-         Type                                                                key,
-         ITimeStampedCreatorAndStorageRules                                  value
+         Type key,
+         ITimeStampedCreatorAndStorageRules value
       )
       {
          retDict.AddOrUpdate(key, value,
@@ -47,8 +47,8 @@
          this ISmartDIContainer diContainer,
          StorageRules storageRule =
             StorageRules.AnyAccessLevel,
-         object                                                                           boundInstance    = null,
-         Func<object>                                                                     creator          = null,
+         object boundInstance = null,
+         Func<object> creator = null,
          Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
       )
          where classT : class
@@ -99,8 +99,8 @@
          this ISmartDIContainer diContainer,
          StorageRules storageRule =
             StorageRules.AnyAccessLevel,
-         object                                                                           boundInstance    = null,
-         Func<object>                                                                     creator          = null,
+         object boundInstance = null,
+         Func<object> creator = null,
          Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
       )
          where classT : class, interfaceT
@@ -145,9 +145,9 @@
       public static void RegisterSoloType
       (
          this ISmartDIContainer diContainer,
-         Type                   classType,
-         StorageRules           storageRule = StorageRules.AnyAccessLevel,
-         Func<object>           creator     = null
+         Type classType,
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null
       )
       {
          diContainer.RegisterType(classType, storageRule, creator, true);
@@ -163,8 +163,8 @@
       public static void RegisterSoloType<T>
       (
          this ISmartDIContainer diContainer,
-         StorageRules           storageRule = StorageRules.AnyAccessLevel,
-         Func<object>           creator     = null
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null
       )
          where T : class
       {
@@ -232,11 +232,11 @@
       public static void RegisterType
       (
          this ISmartDIContainer diContainer,
-         Type                   classType,
-         StorageRules           storageRule          = StorageRules.AnyAccessLevel,
-         Func<object>           creator              = null,
-         bool                   addMainTypeAsDefault = false,
-         params Type[]          typesToCastAs
+         Type classType,
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null,
+         bool addMainTypeAsDefault = false,
+         params Type[] typesToCastAs
       )
       {
          // If accessible types contains the main class type, it is the same as setting that Boolean true
@@ -284,10 +284,10 @@
       public static void RegisterType<T>
       (
          this ISmartDIContainer diContainer,
-         StorageRules           storageRule          = StorageRules.AnyAccessLevel,
-         Func<object>           creator              = null,
-         bool                   addMainTypeAsDefault = false,
-         params Type[]          typesToCastAs
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null,
+         bool addMainTypeAsDefault = false,
+         params Type[] typesToCastAs
       )
          where T : class
       {
@@ -305,10 +305,10 @@
       public static void RegisterTypeAsInterface
       (
          this ISmartDIContainer diContainer,
-         Type                   classType,
-         Type                   interfaceType,
-         StorageRules           storageRule = StorageRules.AnyAccessLevel,
-         Func<object>           creator     = null
+         Type classType,
+         Type interfaceType,
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null
       )
       {
          diContainer.RegisterType(classType, storageRule, creator, false, interfaceType);
@@ -325,9 +325,9 @@
       public static void RegisterTypeAsInterface<T>
       (
          this ISmartDIContainer diContainer,
-         Type                   interfaceType,
-         StorageRules           storageRule = StorageRules.AnyAccessLevel,
-         Func<object>           creator     = null
+         Type interfaceType,
+         StorageRules storageRule = StorageRules.AnyAccessLevel,
+         Func<object> creator = null
       )
          where T : class
       {
@@ -349,7 +349,7 @@
          this ISmartDIContainer diContainer,
          StorageRules storageRule =
             StorageRules.AnyAccessLevel,
-         object                                                                           boundInstance    = null,
+         object boundInstance = null,
          Func<IDictionary<Type, ITimeStampedCreatorAndStorageRules>, IConflictResolution> conflictResolver = null
       )
          where T : class
