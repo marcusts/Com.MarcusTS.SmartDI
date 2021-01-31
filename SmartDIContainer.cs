@@ -271,9 +271,6 @@
          RemoveBoundSharedDependencies(containerObj);
       }
 
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // C O N T A I N E R   T Y P E   I S   D I S A P P E A R I N G
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       /// <summary>
       ///    Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
       /// </summary>
@@ -435,19 +432,8 @@
             var storageMatchedQualifyingRegistrations =
                new ConcurrentDictionary<Type, ITimeStampedCreatorAndStorageRules>(
                   qualifyingRegistrations.Where(qr =>
-                                                   qr
-                                                     .Value
-                                                     .CreatorsAndStorageRules
-                                                         [typeRequestedT]
-                                                     .ProvidedStorageRule ==
-                                                   StorageRules
-                                                     .AnyAccessLevel ||
-                                                   qr
-                                                     .Value
-                                                     .CreatorsAndStorageRules
-                                                         [typeRequestedT]
-                                                     .ProvidedStorageRule ==
-                                                   ruleRequested));
+                                                   qr.Value.CreatorsAndStorageRules[typeRequestedT].ProvidedStorageRule == StorageRules.AnyAccessLevel ||
+                                                   qr.Value.CreatorsAndStorageRules[typeRequestedT].ProvidedStorageRule == ruleRequested));
             if (storageMatchedQualifyingRegistrations.IsEmpty())
             {
                ThrowArgumentException(nameof(Resolve), "Cannot find a registration for the type ->" +
@@ -639,12 +625,6 @@
          return instantiatedObject;
       }
 
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // R E G I S T E R   T Y P E   C O N T R A C T S
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // R E S O L V E
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       /// <summary>
       ///    Removes a list of types that the parent type can be resolved as. Includes creators and storage rules.
       /// </summary>
@@ -969,22 +949,21 @@
          ref object instantiatedObject
       )
       {
-         if (instantiatedObject == null)
+         if ( instantiatedObject == null )
          {
             // No choice but to use activator create instance Note that we actually *create* the qualifyingMasterType and
             // then *save as* the finalTypeRequestedT
 
             // Get the constructors and order by the fewest parameters -- HACK -- not very smart
             var availableConstructors =
-
                // ReSharper disable once UseCollectionCountProperty -- will not compile as the property "Count"
                qualifyingMasterType.GetConstructors().OrderBy(c => c.GetParameters().Count()).ToArray();
 
-            if (availableConstructors.IsEmpty())
+            if ( availableConstructors.IsEmpty() )
             {
                // Ironically, this is a success case.
                // The object is created with Activator.CreateInstance.
-               instantiatedObject = Activator.CreateInstance(qualifyingMasterType);
+               instantiatedObject = Activator.CreateInstance( qualifyingMasterType );
 
                // Did *not* fail
                return false;
@@ -993,59 +972,67 @@
             // try each constructor one at a time until we succeed
             // ReSharper disable once PossibleNullReferenceException -
             //     physically impossible based on "the previous statement" two lines before
-            foreach (var constructor in availableConstructors)
+            foreach ( var constructor in availableConstructors )
             {
-               var constructorParameters = constructor.GetParameters();
+               var constructorParameters = constructor.GetParameters().ToArray();
 
-               if (constructorParameters.IsEmpty())
+               if ( constructorParameters.IsEmpty())
                {
-                  instantiatedObject = Activator.CreateInstance(qualifyingMasterType);
+                  instantiatedObject = Activator.CreateInstance( qualifyingMasterType );
                   break;
                }
 
-               var parameters = new List<object>();
-               var skipThisOne = false;
+               var paramsToInject = new List<object>();
+               var requiredParameterHasBeenSkipped = false;
 
-               foreach (var parameterInfo in constructorParameters)
+               foreach ( var parameterInfo in constructorParameters )
                {
                   object variableToInjectAsParameter = null;
 
-                  try
-                  {
-                     variableToInjectAsParameter = Resolve(parameterInfo.ParameterType);
-                     skipThisOne = variableToInjectAsParameter == null;
-                  }
-                  catch (Exception)
-                  {
-                     // If we threw, then this constructor will not work
-                     Debug.WriteLine("SmartDIContainer: Resolve: Exception on attempt to instantiate " +
-                                     qualifyingMasterType +
-                                     " using one of its constructors. Will try another constructor...");
-                     skipThisOne = true;
-                  }
+                  // If optional, do not throw Resolve errors
+                  var wasIgnoreResolveError = IgnoreResolveError;
+                  IgnoreResolveError = true;
+                  variableToInjectAsParameter = Resolve( parameterInfo.ParameterType );
+                  IgnoreResolveError = wasIgnoreResolveError;
 
-                  if (skipThisOne)
+                  requiredParameterHasBeenSkipped =
+                     variableToInjectAsParameter == null && !parameterInfo.IsOptional;
+
+                  // FAIL CASE because we can never skip a required parameter.
+                  if ( requiredParameterHasBeenSkipped )
                   {
                      break;
                   }
-
-                  parameters.Add(variableToInjectAsParameter);
+                     
+                  // ELSE
+                  // Only add if found; could be an optional parameter.
+                  paramsToInject.Add(variableToInjectAsParameter ?? parameterInfo.DefaultValue);
                }
 
-               if (skipThisOne)
+               // FAIL CASE because we can never skip a required parameter.
+               if ( requiredParameterHasBeenSkipped )
                {
                   continue;
                }
 
-               instantiatedObject = constructor.Invoke(parameters.ToArray());
+               // ELSE Try to instantiate
+               instantiatedObject = constructor.Invoke( paramsToInject.ToArray() );
+               
+               // If success, no need to try other constructors.
+               if ( instantiatedObject  != null )
+               {
+                  break;
+               }
             }
          }
 
-         if (instantiatedObject == null)
+         if ( instantiatedObject == null )
          {
+            // Inverted logic; could *not* get the object
             return true;
          }
 
+         // Inverted logic; success case.
          return false;
       }
 
