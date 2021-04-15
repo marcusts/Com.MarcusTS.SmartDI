@@ -26,15 +26,15 @@ You can declare an instance of the **Smart DI Container** wherever you please. T
 
 The **Smart DI Container** protects against recursive calls, or any other violation of the rules-based registrations you make. For instance, if you register two competing interfaces for the same base type:
 
-``` C#
+<pre lang='cs'>
 _container = new SmartDIContainer();
 _container.RegisterTypeAsInterface<FirstSimpleClass>(typeof(IAmSimple));
 _container.RegisterTypeAsInterface<SecondSimpleClass>(typeof(IAmSimple));
-```
+</pre>
 
 ... and then resolve **IAmSimple**, you have created a _**conflict**_. The container cannot know which one to return. You can set a Boolean property to throw an error in this case. Or you can provide a _conflict resolver_:
 
-``` C#
+<pre lang='cs'>
 var simple = _container.Resolve<IAmSimple>(StorageRules.AnyAccessLevel, null, ForbidSpecificClass<FirstSimpleClass>);
 
 private static IConflictResolution ForbidSpecificClass<T>(IDictionary<Type, ITimeStampedCreatorAndStorageRules> registrations)
@@ -53,7 +53,7 @@ private static IConflictResolution ForbidSpecificClass<T>(IDictionary<Type, ITim
                    TypeToCastWithStorageRule = legalValues.First().Value.CreatorsAndStorageRules.First()
                 };
       }
-```
+</pre>
 
 #### 4\. It is **_tiny_**
 
@@ -73,7 +73,7 @@ See the [unit tests](https://github.com/marcusts/SafeDiContainer).
 
 DI Containers both register and provide access to variables. To stay within the **C# SOLID** Guidance, your app should be as _**private as possible**_. So the last thing you need are global containers. Services are a notable exception. They should be available generally throughout the app. So **app.xaml.cs** might look like this:
 
-``` C#
+<pre lang='cs'>
    public partial class App : Application, IManagePageChanges, IReportAppLifecycle
    {
       public static readonly ISmartDIContainer GlobalServiceContainer = new SmartDIContainer();
@@ -94,11 +94,11 @@ DI Containers both register and provide access to variables. To stay within the 
          StateMachine.ResetCurrentPageMode();
       }
    }
-```
+</pre>
 
 #### Create a View Model Factory
 
-``` C#
+<pre lang='cs'>
    public class ViewModelFactory : IViewModelFactory
    {
       #region Private Fields
@@ -145,11 +145,11 @@ DI Containers both register and provide access to variables. To stay within the 
       {
          return _viewModelContainer.Resolve<T>();
       }
-```
+</pre>
 
 We add **ViewModel.Utils** to give us access to the view model factory:
 
-``` C#   public static class ViewModelUtils
+<pre lang='cs'>   public static class ViewModelUtils
    {
       /// <summary>
       /// Get the view model factory out of the main container; the services are provided at the same time.
@@ -157,7 +157,7 @@ We add **ViewModel.Utils** to give us access to the view model factory:
       public static readonly IViewModelFactory ViewModelBuilder =
          App.GlobalServiceContainer.Resolve<IViewModelFactory>();
    }
-```
+</pre>
 
 The **View Model Factory** requires three services at its constructor. By resolving the factory from the global container _(over at **app.xaml.cs**)_, those services get injected automatically, so are now available for consumption by us here.
 
@@ -165,7 +165,7 @@ The **View Model Factory** requires three services at its constructor. By resolv
 
 In this simple app, the view models don't provide much differentiation, so everything goes into the base class. Note that the "next" button command is shared; it just asks us to navigate.
 
-``` C#   [AddINotifyPropertyChangedInterface]
+<pre lang='cs'>   [AddINotifyPropertyChangedInterface]
 public class CustomViewModelBase : ViewModelWithLifecycle, ICustomViewModelBase
 {
    public ICommand ButtonCommand => new Command(StateMachine.GoToNextMode);
@@ -174,13 +174,13 @@ public class CustomViewModelBase : ViewModelWithLifecycle, ICustomViewModelBase
    public string   Description   { get; set; }
    public string   Title         { get; set; }
 }
-```
+</pre>
 
 #### Add some View Models
 
 These are hyper-simple; the base class does everything for them. Notice that the constructors ask for services. This demonstrates that the baton-passs from the **app.xaml.cs** DI container down to our own DI container has been successful.
 
-``` C#   
+<pre lang='cs'>   
 public class ViewModel_Global : CustomViewModelBase, IViewModel_Global
 {
    public ViewModel_Global(IGlobalServiceTwo service2, IGlobalServiceThree service3) {}
@@ -195,7 +195,7 @@ public class ViewModel_ToBeShared : CustomViewModelBase, IViewModel_ToBeShared
 {
    public ViewModel_ToBeShared(IGlobalServiceTwo service2) {}
 }
-```
+</pre>
 
 #### Create a Page to Display the View Model Data
 
@@ -203,7 +203,7 @@ Your UI will be a lot more complicated. This sample shows how to use a single pa
 
 This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcusts.com/2018/05/01/taking-control-of-variable-lifecycle/)**, which is highly recommended.
 
-``` C#
+<pre lang='cs'>
 <?xml version="1.0" encoding="utf-8" ?>
 <pages:ContentPageWithLifecycle
    xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,11 +255,11 @@ This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcust
         </StackLayout>
     </pages:ContentPageWithLifecycle.Content>
 </pages:ContentPageWithLifecycle>
-```
+</pre>
 
 #### Create a State Machine to Navigate and to Determine What Page goes with What View Model at that Instant
 
-``` C#   public static class StateMachine
+<pre lang='cs'>   public static class StateMachine
    {
       public enum PageModes
       {
@@ -383,19 +383,19 @@ This page uses the life-cycle aware **[ContentPageWithLifecycle](https://marcust
       private static readonly ICustomViewModelBase _sharedViewModel1 = ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage1);
       private static readonly ICustomViewModelBase _sharedViewModel2 = ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage2);
    }
-```
+</pre>
 
 #### Start it Up
 
 From the earlier code in this article, we start the app by asking the **State Machine** to reset:
 
-``` C#      public App()
+<pre lang='cs'>      public App()
       {
          // code omitted ...
 
          **StateMachine.ResetCurrentPageMode();**
       }
-```
+</pre>
 
 The **State Machine** resolves view models from the **View Model Factory**. They work because Resolve() retrieves the view model as it was registered. If you run the sample app, you can see each type of view model and read the description about if or how it is stored.
 

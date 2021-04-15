@@ -26,14 +26,14 @@ You can declare an instance of the **Smart DI Container** wherever you please. T
 
 The **Smart DI Container** protects against recursive calls, or any other violation of the rules-based registrations you make. For instance, if you register two competing interfaces for the same base type:
 
-<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">_container = new SmartDIContainer();
+<pre lang='cs'>_container = new SmartDIContainer();
 _container.RegisterTypeAsInterface<FirstSimpleClass>(typeof(IAmSimple));
 _container.RegisterTypeAsInterface<SecondSimpleClass>(typeof(IAmSimple));
 </pre>
 
 ... and then resolve **IAmSimple**, you have created a _**conflict**_. The container cannot know which one to return. You can set a Boolean property to throw an error in this case. Or you can provide a _conflict resolver_:
 
-<pre class="prettyprint lang-javascript" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">var simple = _container.Resolve<IAmSimple>(StorageRules.AnyAccessLevel, null, ForbidSpecificClass<FirstSimpleClass>);
+<pre lang='cs'>var simple = _container.Resolve<IAmSimple>(StorageRules.AnyAccessLevel, null, ForbidSpecificClass<FirstSimpleClass>);
 
 private static IConflictResolution ForbidSpecificClass<T>(IDictionary<Type, ITimeStampedCreatorAndStorageRules> registrations)
 {
