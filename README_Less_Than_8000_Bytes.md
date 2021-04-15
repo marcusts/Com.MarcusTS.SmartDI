@@ -63,4 +63,4 @@ We actually added comments! _(And we were not struck by lightning)_
 
 #### 6\. It is tested and proven
 
-See the [unit tests](https://github.com/marcusts/SafeDiContainer).
+See the [unit tests](https://github.com/marcusts/SmartDI.MSTests).
