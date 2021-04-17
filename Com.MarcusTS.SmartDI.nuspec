@@ -3,7 +3,7 @@
 <package>
    <metadata>
       <id>Com.MarcusTS.SmartDI</id>
-      <version>1.0.25</version>
+      <version>1.0.26</version>
       <title>Smart DI Container</title>
       <authors>Stephen Marcus</authors>
       <owners>Marcus Technical Services, Inc.</owners>
@@ -18,12 +18,11 @@
 
          * Does not store instantiated objects unnecessarily.
 
-         * Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to implement an interface.
+         * Supports object life-cycle management. When an object dies, it is removed from the container.  This requires you to raise a global message.
 
-         * Indexes a shared container class instance to the objects that share it so that when those objects die, the container class instance is also removed.  This does not requires any other interfaces or management steps.
+         * Supports simple register-and-resolve so types do not need to be registered in advance.
       </description>
       <copyright>Copyright 2021 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
-      <releaseNotes>Bug fixes.</releaseNotes>
       <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
    </metadata>
 </package>

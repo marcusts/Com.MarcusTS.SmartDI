@@ -96,4 +96,4 @@ See the [unit tests](https://github.com/marcusts/SmartDI.MSTests).
 
 ## Other Resources
 
-Please also refer to the [Quick Start Guide](https://github.com/marcusts/Com.MarcusTS.SmartDI/Quick_Start_Guide.md).
+Please also refer to the [Quick Start Guide](https://github.com/marcusts/Com.MarcusTS.SmartDI/blob/master/Quick_Start_Guide.md).
