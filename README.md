@@ -1,8 +1,8 @@
-﻿# Finally, a DI Container Without The Fake "IOC" Swagger
+# Finally, a DI Container Without The Fake "IOC" Swagger
 
 ### _It's just dependency injection - that's all, folks_
 
-Modern programmers require some means of creating new classes out of other classes that are passed as parameters, and to do so in an elegant, seamless manner. Those new instances often require _caching_, especially if they are services or view models. The got-to solution for this challenge has been the mis-named and grossly mis-described _"IOC Container"_. In [another article](https://marcusts.com/2018/04/09/the-ioc-container-anti-pattern/), I explained why that is a bad idea. If we can't even name something accurately, it is time to reconsider it entirely. So I have done that here with the tool that all of us actually need: a DI _("Dependency Injection")_ Container.
+Modern programmers require some means of creating new classes out of other classes that are passed as parameters, and to do so in an elegant, seamless manner. Those new instances often require _caching_, especially if they are services or view models. The got-to solution for this challenge has been the mis-named and grossly mis-described _"IOC Container"_. If we can't even name something accurately, it is time to reconsider it entirely. So I have done that here with the tool that all of us actually need: a DI _("Dependency Injection")_ Container.
 
 # What's So Smart About It?
 
@@ -44,15 +44,15 @@ You can declare an instance of the **Smart DI Container** wherever you please. T
 
 This container  protects against recursive calls, or any other violation of the rules-based registrations you make. For instance, if you register two competing interfaces for the same base type:
 
-<pre lang='cs'>
+``` C#
 _container = new SmartDIContainer();
 _container.RegisterTypeAsInterface<FirstSimpleClass>(typeof(IAmSimple));
 _container.RegisterTypeAsInterface<SecondSimpleClass>(typeof(IAmSimple));
-</pre>
+```
 
 ... and then resolve **IAmSimple**, you have created a _**conflict**_. The container cannot know which one to return. You can set a Boolean property to throw an error in this case. Or you can provide a _conflict resolver_:
 
-<pre lang='cs'>
+``` C#
 var simple = 
    _container.Resolve<IAmSimple>(
       StorageRules.AnyAccessLevel, null, ForbidSpecificClass<FirstSimpleClass>);
@@ -80,7 +80,7 @@ private static IConflictResolution ForbidSpecificClass<T>(
          };
    }
 }
-</pre>
+```
 
 ## The Smart DI Container is **_tiny_**
 
