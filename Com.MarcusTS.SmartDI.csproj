@@ -53,12 +53,9 @@
    </ItemGroup>
 
    <ItemGroup>
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.26" />
      <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
      <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
-   </ItemGroup>
-
-   <ItemGroup>
-     <ProjectReference Include="..\SharedUtils\SharedUtils.csproj" />
    </ItemGroup>
 
    <ItemGroup>
