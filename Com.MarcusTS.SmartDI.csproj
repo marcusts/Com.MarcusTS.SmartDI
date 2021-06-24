@@ -27,9 +27,9 @@
       <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>1.0.26</Version>
-      <AssemblyVersion>1.0.26.0</AssemblyVersion>
-      <FileVersion>1.0.26.0</FileVersion>
+      <Version>1.0.27</Version>
+      <AssemblyVersion>1.0.27.0</AssemblyVersion>
+      <FileVersion>1.0.27.0</FileVersion>
       <SignAssembly>false</SignAssembly>
       <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
       <DelaySign>false</DelaySign>
@@ -45,6 +45,7 @@
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
       <DefineConstants>DEBUG;TRACE</DefineConstants>
       <DocumentationFile>M:\MyDocs\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
+      <PlatformTarget>x64</PlatformTarget>
    </PropertyGroup>
 
    <ItemGroup>
@@ -52,8 +53,12 @@
    </ItemGroup>
 
    <ItemGroup>
-     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.22" />
-     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\SharedUtils\SharedUtils.csproj" />
    </ItemGroup>
 
    <ItemGroup>
