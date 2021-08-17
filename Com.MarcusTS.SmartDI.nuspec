@@ -3,7 +3,7 @@
 <package>
    <metadata>
       <id>Com.MarcusTS.SmartDI</id>
-      <version>1.0.32</version>
+      <version>1.0.34</version>
       <title>Smart DI Container</title>
       <authors>Stephen Marcus</authors>
       <owners>Marcus Technical Services, Inc.</owners>
@@ -24,5 +24,9 @@
       </description>
       <copyright>Copyright 2021 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
       <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
+      <readme>docs\README.md</readme>
    </metadata>
+   <files>
+      <file src="..\README.md" target="docs\" />
+   </files>
 </package>

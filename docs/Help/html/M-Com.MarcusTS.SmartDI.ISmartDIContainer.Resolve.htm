@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head><link rel="shortcut icon" href="../favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>Resolve Method </title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="Com.MarcusTS.SmartDI" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="M-Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="M-Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="M:Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve(Type,StorageRules,System.Object,Func{ConcurrentDictionary{Type, ITimeStampedCreatorAndStorageRules}, IConflictResolution})" />
+      <MSHelp:TOCTitle Title="Resolve Method " />
+      <MSHelp:RLTitle Title="ISmartDIContainer.Resolve Method  (Com.MarcusTS.SmartDI)" />
+      <MSHelp:Keyword Index="A" Term="M:Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve(Type,StorageRules,System.Object,Func{ConcurrentDictionary{Type, ITimeStampedCreatorAndStorageRules}, IConflictResolution})" />
+      <MSHelp:Keyword Index="A" Term="frlrfComMarcusTSSmartDIISmartDIContainerClassResolveTopic" />
+      <MSHelp:Keyword Index="K" Term="Resolve method" />
+      <MSHelp:Keyword Index="K" Term="ISmartDIContainer.Resolve method" />
+      <MSHelp:Keyword Index="F" Term="Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="Com.MarcusTS.SmartDI.dll" />
+      <MSHelp:Attr Name="APIName" Value="Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="Creates an instance of a class and stores it according to the requested rules. Only works if you have registered each base class first along with any interface they should be available (type-cast) as. See for details about this. ..." />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+  <link rel="stylesheet" href="../TOC.css"><script type="text/javascript" src="../TOC.js"></script></head>
+  <body onload="javascript: Initialize();" onresize="javascript: ResizeTree();">
+            <div id="TOCDiv" class="TOCDiv" style="width: 310px; float: left; position: relative; ">
+
+            <div id="divSearchOpts" class="SearchOpts" style="height: 95px; display: none;">
+                <div class="SearchOptsInner">
+                    <img class="TOCLink" onclick="javascript: ShowHideSearch(false);" src="../Close.png" height="24" width="24" alt="Hide Search" title="Hide Search" style="float: right;" />
+                    <span class="Title">Keyword(s) to search:</span>
+                </div>
+                <div class="SearchOptsInner">
+                    <input id="txtSearchText" type="text" style="width: 95.5%;" onkeypress="javascript: return OnSearchTextKeyPress(event);" />
+                </div>
+                <div class="SearchOptsInner">
+                    <input id="chkSortByTitle" type="checkbox" />&nbsp;Sort results by title
+                    <input type="button" value="Search" onclick="javascript: return PerformSearch();" style="float: right;" />
+                </div>
+            </div>
+
+            <div id="divIndexOpts" class="IndexOpts" style="height: 28px; display: none;">
+                <img class="TOCLink" onclick="javascript: ShowHideIndex(false);"
+                     src="../Close.png" height="24" width="24" alt="Hide Keyword Index" title="Hide Keyword Index" style="float: right;" />
+                <span class="Title">Keyword Index</span>
+            </div>
+
+            <div id="divNavOpts" class="NavOpts" style="height: 28px;">
+                <!--<img class="TOCLink" onclick="javascript: SyncTOC();" src="../SyncTOC.png"
+                     height="24" width="24" alt="Sync to TOC" title="Sync to TOC" />-->
+                <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(true);"
+                     src="../ExpandAll.png" height="24" width="24" alt="Expand all" title="Expand all" />
+                <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(false);"
+                     src="../CollapseAll.png" height="24" width="24" alt="Collapse all" title="Collapse all" />
+                <!--<img class="TOCLink" onclick="javascript: alert('Please make sure to use either Index.aspx or Index.php to enable the Keyword Index feature.');"
+                     src="../Index.png" height="24" width="24" alt="Keyword Index" title="Keyword Index" />-->
+                <img class="TOCLink" onclick="javascript: ShowHideSearch(true);"
+                     src="../Search.png" height="24" width="24" alt="Search" title="Search" />
+                <img class="TOCLink" onclick="javascript: ShowDirectLink();"
+                     src="../Link.png" height="24" width="24" alt="Get direct link to the displayed topic" title="Get direct link to the displayed topic" />
+                <a href="#" onclick="javascript: window.history.go(-1); return false;">
+                    <img class="TOCLink" style="float: right;"
+                         src="../Back.png" height="24" width="24" alt="Previous page" title="Previous page" />
+                </a>
+            </div>
+
+            <div class="Tree" id="divSearchResults" style="display: none;"
+                 onselectstart="javascript: return false;">
+            </div>
+
+            <div class="Tree" id="divIndexResults" style="display: none;"
+                 onselectstart="javascript: return false;">
+            </div>
+
+            <div class="Tree" id="divTree" onselectstart="javascript: return false;">
+              <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-Com.MarcusTS.SmartDI.htm" target="_self">Com.MarcusTS.SmartDI Namespace</a>
+<div class="Hidden">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.ConflictResolution.htm" target="_self">ConflictResolution Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" target="_self">CreatorAndStorageRule Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.IConflictResolution.htm" target="_self">IConflictResolution Interface</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" target="_self">IProvideCreatorAndStorageRule Interface</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" target="_self">ISmartDIContainer Interface</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" target="_self">ISmartDIContainer Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="Methods.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" target="_self">ISmartDIContainer Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="M-Com.MarcusTS.SmartDI.ISmartDIContainer.ContainerObjectIsDisappearing.htm" target="_self">ContainerObjectIsDisappearing Method </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="#">Overload:Com.MarcusTS.SmartDI.ISmartDIContainer.QualifyingRegistrationsExist</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="M-Com.MarcusTS.SmartDI.ISmartDIContainer.RegisterTypeContracts.htm" target="_self">RegisterTypeContracts Method </a>
+</div>
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="M-Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve.htm" target="_self">Resolve Method </a>
+</div>
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="M-Com.MarcusTS.SmartDI.ISmartDIContainer.UnregisterTypeContracts--1.htm" target="_self">UnregisterTypeContracts(TParent) Method </a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="Properties.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" target="_self">ISmartDIContainer Properties</a>
+<div class="Hidden">
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" target="_self">ISmartDIContainerForUnitTesting Interface</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" target="_self">ITimeStampedCreatorAndStorageRules Interface</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" target="_self">SmartDIContainer Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" target="_self">SmartDIContainerForUnitTesting Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" target="_self">SmartDIExtensions Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeItem">
+<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="T-Com.MarcusTS.SmartDI.StorageRules.htm" target="_self">StorageRules Enumeration</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" target="_self">TimeStampedCreatorAndStorageRules Class</a>
+<div class="Hidden">
+</div>
+</div>
+</div>
+</div>
+
+            </div>
+
+        </div>
+
+        <div id="TOCSizer" class="TOCSizer" onmousedown="OnMouseDown(event)" onselectstart="javascript: return false;"></div>
+        
+        <div id ="TopicContent" name="TopicContent" class="TopicContent" style="float: none; margin-left: 312px;height: -webkit-fill-available;display:block;overflow: auto;">
+          
+          <!-- Content Starts Here -->
+          <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">ISmartDIContainer<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Resolve Method </h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <div class="summary">
+   Creates an instance of a class and stores it according to the requested rules. Only works if you have
+   registered each base class first along with any interface they should be available (type-cast) as. See
+   <a href="M-Com.MarcusTS.SmartDI.ISmartDIContainer.RegisterTypeContracts.htm">RegisterTypeContracts(Type, IDictionary<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>Type, IProvideCreatorAndStorageRule<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>)</a> for details about this.
+   </div>
+                <div class="summary">
+   Resolves the specified type requested t.
+   </div>
+                <p />
+    <b>Namespace:</b> 
+   <a href="N-Com.MarcusTS.SmartDI.htm">Com.MarcusTS.SmartDI</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">Com.MarcusTS.SmartDI</span> (in Com.MarcusTS.SmartDI.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><a href="http://msdn.microsoft.com/en-us/library/system.object.aspx" target="_blank">Object</a> <span class="identifier">Resolve</span>(
+	<a href="http://msdn.microsoft.com/en-us/library/system.type.aspx" target="_blank">Type</a> <span class="parameter">typeRequestedT</span>,
+	<a href="T-Com.MarcusTS.SmartDI.StorageRules.htm">StorageRules</a> <span class="parameter">storageRule</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/system.object.aspx" target="_blank">Object</a> <span class="parameter">boundInstance</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a>&lt;<a href="http://msdn.microsoft.com/en-us/library/dd287191.aspx" target="_blank">ConcurrentDictionary</a>&lt;<a href="http://msdn.microsoft.com/en-us/library/system.type.aspx" target="_blank">Type</a>, <a href="T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm">ITimeStampedCreatorAndStorageRules</a>&gt;, <a href="T-Com.MarcusTS.SmartDI.IConflictResolution.htm">IConflictResolution</a>&gt; <span class="parameter">conflictResolver</span>
+)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="typeRequestedT"><dt><span class="parameterItalic">typeRequestedT</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.type.aspx" target="_blank">Type</a><br />
+   This is the type that you wish to receive. It is not necessarily the "base" class type. It is more commonly an
+   interface implemented by your base class type.
+   The type requested t.</dd></dl><dl paramName="storageRule"><dt><span class="parameterItalic">storageRule</span></dt><dd>Type: <a href="T-Com.MarcusTS.SmartDI.StorageRules.htm">Com.MarcusTS.SmartDI<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>StorageRules</a><br />
+   This is a *request* for a storage rule, but is subject to strict guidelines:
+   * If you ask for "AnyAccessLevel", and there is no other value set in the registration, we will give you an
+   unstored local variable.
+   * If, when you registered, you set the access level to something like "SharedDependencyBetweenInstances", and
+   then here on Resolve ask for "GlobalSingleton", we default to throw with an illegal request.
+   The storage rule.</dd></dl><dl paramName="boundInstance"><dt><span class="parameterItalic">boundInstance</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.object.aspx" target="_blank">Object</a><br />
+   The "host" or "bound" class that is attached to this instance. Only required if you need a
+   "SharedDependencyBetweenInstances".
+   The bound instance.</dd></dl><dl paramName="conflictResolver"><dt><span class="parameterItalic">conflictResolver</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="http://msdn.microsoft.com/en-us/library/dd287191.aspx" target="_blank">ConcurrentDictionary</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="http://msdn.microsoft.com/en-us/library/system.type.aspx" target="_blank">Type</a>, <a href="T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm">ITimeStampedCreatorAndStorageRules</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>, <a href="T-Com.MarcusTS.SmartDI.IConflictResolution.htm">IConflictResolution</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />
+   This is an advanced parameter where you can include a function to "break the tie" when this container tries to
+   Resolve, but comes up with more than one competing resolution contract. If you leave this at null, and we
+   cannot see a single legal choice, we will throw an error.
+   The conflict resolver.</dd></dl></div><h4 class="subHeading">Return Value</h4>An object which *must* then be cast as the type requested by the *caller*.<h4 class="subHeading">Return Value</h4>System.Object.</div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm">ISmartDIContainer Interface</a></div><div class="seeAlsoStyle"><a href="N-Com.MarcusTS.SmartDI.htm">Com.MarcusTS.SmartDI Namespace</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          <!-- /Content Ends Here -->
+        </div>
+
+
+  </body>
+</html>

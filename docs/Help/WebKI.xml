@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title=" enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="AddOrUpdate method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.AddOrUpdate.htm" />
+  <HelpKINode Title="AnyAccessLevel enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="AnyAccessLevel field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.AnyAccessLevel.htm" />
+  <HelpKINode Title="ClearUnitTestExceptions method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ClearUnitTestExceptions.htm" />
+  <HelpKINode Title="ClearUnitTestExceptions method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ClearUnitTestExceptions.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI namespace" Url="html/N-Com.MarcusTS.SmartDI.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ConflictResolution class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ConflictResolution class" Url="html/T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.CreatorAndStorageRule class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.CreatorAndStorageRule class" Url="html/T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.IConflictResolution interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.IConflictResolution interface" Url="html/T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule interface" Url="html/T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ISmartDIContainer interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ISmartDIContainer interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules interface" Url="html/T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIContainer class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIContainer class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIExtensions class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.SmartDIExtensions class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.StorageRules enumeration" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules class" Url="html/T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="ConflictResolution class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+  <HelpKINode Title="ConflictResolution class" Url="html/T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+  <HelpKINode Title="ConflictResolution class">
+    <HelpKINode Title="about ConflictResolution class" Url="html/T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.ConflictResolution.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConflictResolution.MasterType property" Url="html/P-Com.MarcusTS.SmartDI.ConflictResolution.MasterType.htm" />
+  <HelpKINode Title="ConflictResolution.TypeToCastWithStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.ConflictResolution.TypeToCastWithStorageRule.htm" />
+  <HelpKINode Title="ContainerObjectIsDisappearing method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.ContainerObjectIsDisappearing.htm" />
+  <HelpKINode Title="ContainerObjectIsDisappearing method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.ContainerObjectIsDisappearing.htm" />
+  <HelpKINode Title="CreatorAndStorageRule class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+  <HelpKINode Title="CreatorAndStorageRule class" Url="html/T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+  <HelpKINode Title="CreatorAndStorageRule class">
+    <HelpKINode Title="about CreatorAndStorageRule class" Url="html/T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Com.MarcusTS.SmartDI.CreatorAndStorageRule.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.CreatorAndStorageRule.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreatorAndStorageRule.CreatorAndStorageRule constructor" Url="html/M-Com.MarcusTS.SmartDI.CreatorAndStorageRule.-ctor.htm" />
+  <HelpKINode Title="CreatorAndStorageRule.ProvidedCreator property" Url="html/P-Com.MarcusTS.SmartDI.CreatorAndStorageRule.ProvidedCreator.htm" />
+  <HelpKINode Title="CreatorAndStorageRule.ProvidedStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.CreatorAndStorageRule.ProvidedStorageRule.htm" />
+  <HelpKINode Title="CreatorsAndStorageRules property" Url="html/P-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.CreatorsAndStorageRules.htm" />
+  <HelpKINode Title="CreatorsAndStorageRules property" Url="html/P-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.CreatorsAndStorageRules.htm" />
+  <HelpKINode Title="DoNotStore enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="DoNotStore field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.DoNotStore.htm" />
+  <HelpKINode Title="ExposedGlobalSingletons property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedGlobalSingletons.htm" />
+  <HelpKINode Title="ExposedGlobalSingletons property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedGlobalSingletons.htm" />
+  <HelpKINode Title="ExposedRegisteredTypeContracts property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts.htm" />
+  <HelpKINode Title="ExposedRegisteredTypeContracts property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts.htm" />
+  <HelpKINode Title="ExposedSharedInstancesWithBoundMembers property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers.htm" />
+  <HelpKINode Title="ExposedSharedInstancesWithBoundMembers property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers.htm" />
+  <HelpKINode Title="ExposedThrowOnAttemptToAssignDuplicateContractSubType property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType.htm" />
+  <HelpKINode Title="ExposedThrowOnAttemptToAssignDuplicateContractSubType property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType.htm" />
+  <HelpKINode Title="ExposedThrowOnMultipleRegisteredTypesForOneResolvedType property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType.htm" />
+  <HelpKINode Title="ExposedThrowOnMultipleRegisteredTypesForOneResolvedType property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType.htm" />
+  <HelpKINode Title="GlobalSingleton enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="GlobalSingleton field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.GlobalSingleton.htm" />
+  <HelpKINode Title="IConflictResolution interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+  <HelpKINode Title="IConflictResolution interface" Url="html/T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+  <HelpKINode Title="IConflictResolution interface">
+    <HelpKINode Title="about IConflictResolution interface" Url="html/T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.IConflictResolution.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IConflictResolution.MasterType property" Url="html/P-Com.MarcusTS.SmartDI.IConflictResolution.MasterType.htm" />
+  <HelpKINode Title="IConflictResolution.TypeToCastWithStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.IConflictResolution.TypeToCastWithStorageRule.htm" />
+  <HelpKINode Title="IgnoreAllErrors property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors.htm" />
+  <HelpKINode Title="IgnoreAllErrors property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors.htm" />
+  <HelpKINode Title="IgnoreResolveError property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreResolveError.htm" />
+  <HelpKINode Title="IgnoreResolveError property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreResolveError.htm" />
+  <HelpKINode Title="IProvideCreatorAndStorageRule interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+  <HelpKINode Title="IProvideCreatorAndStorageRule interface" Url="html/T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+  <HelpKINode Title="IProvideCreatorAndStorageRule interface">
+    <HelpKINode Title="about IProvideCreatorAndStorageRule interface" Url="html/T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IProvideCreatorAndStorageRule.ProvidedCreator property" Url="html/P-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.ProvidedCreator.htm" />
+  <HelpKINode Title="IProvideCreatorAndStorageRule.ProvidedStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.ProvidedStorageRule.htm" />
+  <HelpKINode Title="IsArgumentException property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.IsArgumentException.htm" />
+  <HelpKINode Title="IsArgumentException property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.IsArgumentException.htm" />
+  <HelpKINode Title="ISmartDIContainer interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+  <HelpKINode Title="ISmartDIContainer interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+  <HelpKINode Title="ISmartDIContainer interface">
+    <HelpKINode Title="about ISmartDIContainer interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.ISmartDIContainer.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISmartDIContainer.ContainerObjectIsDisappearing method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.ContainerObjectIsDisappearing.htm" />
+  <HelpKINode Title="ISmartDIContainer.IgnoreAllErrors property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreAllErrors.htm" />
+  <HelpKINode Title="ISmartDIContainer.IgnoreResolveError property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainer.IgnoreResolveError.htm" />
+  <HelpKINode Title="ISmartDIContainer.RegisterTypeContracts method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.RegisterTypeContracts.htm" />
+  <HelpKINode Title="ISmartDIContainer.Resolve method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve.htm" />
+  <HelpKINode Title="ISmartDIContainer.UnregisterTypeContracts(Of TParent) method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="ISmartDIContainer.UnregisterTypeContracts&lt;TParent&gt; method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting interface">
+    <HelpKINode Title="about ISmartDIContainerForUnitTesting interface" Url="html/T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ClearUnitTestExceptions method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ClearUnitTestExceptions.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ExposedGlobalSingletons property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedGlobalSingletons.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.IsArgumentException property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.IsArgumentException.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.IsOperationException property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.IsOperationException.htm" />
+  <HelpKINode Title="ISmartDIContainerForUnitTesting.ResetUnitTestContainer method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ResetUnitTestContainer.htm" />
+  <HelpKINode Title="IsOperationException property" Url="html/P-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.IsOperationException.htm" />
+  <HelpKINode Title="IsOperationException property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.IsOperationException.htm" />
+  <HelpKINode Title="ITimeStampedCreatorAndStorageRules interface" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="ITimeStampedCreatorAndStorageRules interface" Url="html/T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="ITimeStampedCreatorAndStorageRules interface">
+    <HelpKINode Title="about ITimeStampedCreatorAndStorageRules interface" Url="html/T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITimeStampedCreatorAndStorageRules.CreatorsAndStorageRules property" Url="html/P-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.CreatorsAndStorageRules.htm" />
+  <HelpKINode Title="ITimeStampedCreatorAndStorageRules.WhenAdded property" Url="html/P-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.WhenAdded.htm" />
+  <HelpKINode Title="MasterType property" Url="html/P-Com.MarcusTS.SmartDI.ConflictResolution.MasterType.htm" />
+  <HelpKINode Title="MasterType property" Url="html/P-Com.MarcusTS.SmartDI.IConflictResolution.MasterType.htm" />
+  <HelpKINode Title="ProvidedCreator property" Url="html/P-Com.MarcusTS.SmartDI.CreatorAndStorageRule.ProvidedCreator.htm" />
+  <HelpKINode Title="ProvidedCreator property" Url="html/P-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.ProvidedCreator.htm" />
+  <HelpKINode Title="ProvidedStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.CreatorAndStorageRule.ProvidedStorageRule.htm" />
+  <HelpKINode Title="ProvidedStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.IProvideCreatorAndStorageRule.ProvidedStorageRule.htm" />
+  <HelpKINode Title="RegisterAndResolve(Of classT) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolve--1.htm" />
+  <HelpKINode Title="RegisterAndResolve&lt;classT&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolve--1.htm" />
+  <HelpKINode Title="RegisterAndResolveAsInterface(Of classT, interfaceT) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolveAsInterface--2.htm" />
+  <HelpKINode Title="RegisterAndResolveAsInterface&lt;classT, interfaceT&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolveAsInterface--2.htm" />
+  <HelpKINode Title="RegisterTypeContracts method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.RegisterTypeContracts.htm" />
+  <HelpKINode Title="RegisterTypeContracts method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.RegisterTypeContracts.htm" />
+  <HelpKINode Title="ResetUnitTestContainer method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainerForUnitTesting.ResetUnitTestContainer.htm" />
+  <HelpKINode Title="ResetUnitTestContainer method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ResetUnitTestContainer.htm" />
+  <HelpKINode Title="Resolve method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.Resolve.htm" />
+  <HelpKINode Title="Resolve method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.Resolve.htm" />
+  <HelpKINode Title="Resolve(Of T) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.Resolve--1.htm" />
+  <HelpKINode Title="Resolve&lt;T&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.Resolve--1.htm" />
+  <HelpKINode Title="SharedDependencyBetweenInstances enumeration member" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="SharedDependencyBetweenInstances field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.SharedDependencyBetweenInstances.htm" />
+  <HelpKINode Title="SmartDIContainer class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+  <HelpKINode Title="SmartDIContainer class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+  <HelpKINode Title="SmartDIContainer class">
+    <HelpKINode Title="about SmartDIContainer class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.SmartDIContainer.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SmartDIContainer.ContainerObjectIsDisappearing method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.ContainerObjectIsDisappearing.htm" />
+  <HelpKINode Title="SmartDIContainer.IgnoreAllErrors property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreAllErrors.htm" />
+  <HelpKINode Title="SmartDIContainer.IgnoreResolveError property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainer.IgnoreResolveError.htm" />
+  <HelpKINode Title="SmartDIContainer.RegisterTypeContracts method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.RegisterTypeContracts.htm" />
+  <HelpKINode Title="SmartDIContainer.Resolve method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.Resolve.htm" />
+  <HelpKINode Title="SmartDIContainer.SmartDIContainer constructor" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.-ctor.htm" />
+  <HelpKINode Title="SmartDIContainer.UnregisterTypeContracts(Of TParent) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="SmartDIContainer.UnregisterTypeContracts&lt;TParent&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting class">
+    <HelpKINode Title="about SmartDIContainerForUnitTesting class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ClearUnitTestExceptions method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ClearUnitTestExceptions.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ExposedGlobalSingletons property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedGlobalSingletons.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedRegisteredTypeContracts.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedSharedInstancesWithBoundMembers.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedThrowOnAttemptToAssignDuplicateContractSubType.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ExposedThrowOnMultipleRegisteredTypesForOneResolvedType.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.IsArgumentException property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.IsArgumentException.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.IsOperationException property" Url="html/P-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.IsOperationException.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.ResetUnitTestContainer method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.ResetUnitTestContainer.htm" />
+  <HelpKINode Title="SmartDIContainerForUnitTesting.SmartDIContainerForUnitTesting constructor" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainerForUnitTesting.-ctor.htm" />
+  <HelpKINode Title="SmartDIExtensions class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+  <HelpKINode Title="SmartDIExtensions class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+  <HelpKINode Title="SmartDIExtensions class">
+    <HelpKINode Title="about SmartDIExtensions class" Url="html/T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.SmartDIExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SmartDIExtensions.AddOrUpdate method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.AddOrUpdate.htm" />
+  <HelpKINode Title="SmartDIExtensions.RegisterAndResolve(Of classT) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolve--1.htm" />
+  <HelpKINode Title="SmartDIExtensions.RegisterAndResolve&lt;classT&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolve--1.htm" />
+  <HelpKINode Title="SmartDIExtensions.RegisterAndResolveAsInterface(Of classT, interfaceT) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolveAsInterface--2.htm" />
+  <HelpKINode Title="SmartDIExtensions.RegisterAndResolveAsInterface&lt;classT, interfaceT&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.RegisterAndResolveAsInterface--2.htm" />
+  <HelpKINode Title="SmartDIExtensions.Resolve(Of T) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.Resolve--1.htm" />
+  <HelpKINode Title="SmartDIExtensions.Resolve&lt;T&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIExtensions.Resolve--1.htm" />
+  <HelpKINode Title="StorageRules enumeration" Url="html/T-Com.MarcusTS.SmartDI.StorageRules.htm" />
+  <HelpKINode Title="StorageRules.AnyAccessLevel field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.AnyAccessLevel.htm" />
+  <HelpKINode Title="StorageRules.DoNotStore field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.DoNotStore.htm" />
+  <HelpKINode Title="StorageRules.GlobalSingleton field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.GlobalSingleton.htm" />
+  <HelpKINode Title="StorageRules.SharedDependencyBetweenInstances field" Url="html/F-Com.MarcusTS.SmartDI.StorageRules.SharedDependencyBetweenInstances.htm" />
+  <HelpKINode Title="TimeStampedCreatorAndStorageRules class" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="TimeStampedCreatorAndStorageRules class" Url="html/T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+  <HelpKINode Title="TimeStampedCreatorAndStorageRules class">
+    <HelpKINode Title="about TimeStampedCreatorAndStorageRules class" Url="html/T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimeStampedCreatorAndStorageRules.CreatorsAndStorageRules property" Url="html/P-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.CreatorsAndStorageRules.htm" />
+  <HelpKINode Title="TimeStampedCreatorAndStorageRules.WhenAdded property" Url="html/P-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.WhenAdded.htm" />
+  <HelpKINode Title="TypeToCastWithStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.ConflictResolution.TypeToCastWithStorageRule.htm" />
+  <HelpKINode Title="TypeToCastWithStorageRule property" Url="html/P-Com.MarcusTS.SmartDI.IConflictResolution.TypeToCastWithStorageRule.htm" />
+  <HelpKINode Title="UnregisterTypeContracts(Of TParent) method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="UnregisterTypeContracts(Of TParent) method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="UnregisterTypeContracts&lt;TParent&gt; method" Url="html/M-Com.MarcusTS.SmartDI.ISmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="UnregisterTypeContracts&lt;TParent&gt; method" Url="html/M-Com.MarcusTS.SmartDI.SmartDIContainer.UnregisterTypeContracts--1.htm" />
+  <HelpKINode Title="WhenAdded property" Url="html/P-Com.MarcusTS.SmartDI.ITimeStampedCreatorAndStorageRules.WhenAdded.htm" />
+  <HelpKINode Title="WhenAdded property" Url="html/P-Com.MarcusTS.SmartDI.TimeStampedCreatorAndStorageRules.WhenAdded.htm" />
+</HelpKI>

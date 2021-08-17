@@ -12,7 +12,7 @@ IOC containers always store an instance when you create it. That is extremely _*
 
 Use these to create instances at any time and without caching. The local variable you retrieve on Resolve() is the only stored reference.  
 
-![](https://marcusts.com/wp-content/uploads/2018/12/AnyAccessLevel2.png)
+![](https://gitlab.com/marcusts1/nugetimages/-/blob/master/AnyAccessLevel2.png)
 
 ### 2. *Shared Between Instances*
 
@@ -34,7 +34,7 @@ In spite of the ginormous size of other containers on the market, none of them c
 
 The container creates and caches a permanent instance of any type registered with this access level. The cached reference dies when the container itself falls out of scope.  
 
-![](https://marcusts.com/wp-content/uploads/2018/12/GlobalSingleton.png)
+![](https://gitlab.com/marcusts1/nugetimages/-/blob/master/GlobalSingleton.png)
 
 ## The Smart DI Container is ***Not*** *inherently* global or static
 
@@ -94,6 +94,47 @@ We actually added comments! _(And we were not struck by lightning)_
 
 See the [unit tests](https://github.com/marcusts/SmartDI.MSTests).
 
-## Other Resources
+## Quick Start
 
-Please also refer to the [Quick Start Guide](https://github.com/marcusts/Com.MarcusTS.SmartDI/blob/master/Quick_Start_Guide.md).
+Please also refer to the [Quick Start Guide](https://github.com/marcusts/Com.MarcusTS.SmartDI/blob/master/docs/Quick_Start_Guide.md).
+
+## The Smart DI Container Is Open Source; Enjoy Our Other Offerings
+
+If you find value in this software, consider these other related projects:
+
+### *Shared Utils*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.SharedUtils)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.SharedUtils)
+
+### *The Smart DI Container*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.SmartDI)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.SmartDI)
+
+### *Shared Forms*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.SharedForms)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.SharedForms)
+
+### *Responsive Tasks*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.ResponsiveTasks)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.ResponsiveTasks)
+
+### *Responsive Tasks - Xamarin.Forms Support*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.ResponsiveTasks.XamFormsSupport)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.ResponsiveTasks.XamFormsSupport)
+
+### *The Modern App Demo*
+
+[GutHub](https://github.com/marcusts/Com.MarcusTS.ModernAppDemo)
+
+&nbsp;
+![](https://gitlab.com/marcusts1/nugetimages/-/raw/master/Modern_App_Demo_Master_FINAL.gif)
