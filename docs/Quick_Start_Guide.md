@@ -7,7 +7,7 @@ The most important concept here is that a good DI container is not **public stat
 
 The **ResponsiveTasksDemo** uses a **MasterViewPresenter** to determine what view to show in the app's main page content area:
 
-<pre lang='cs'>
+```csharp
 private async Task ChangeContentView<InterfaceT, ClassT>(object viewModel)
    where ClassT : View, InterfaceT
    where InterfaceT : class
@@ -23,11 +23,11 @@ private async Task ChangeContentView<InterfaceT, ClassT>(object viewModel)
 
    ... 
    
-</pre>
+```
 
 This method is called inside the MasterViewPresenter using a ResponsiveTasks listener that waits for changes to the current view model:
 
-<pre lang='cs'>
+```csharp
 private async Task HandleSetCurrentModuleTask(IResponsiveTaskParams paramDict)
 {
    ...
@@ -53,11 +53,11 @@ private async Task HandleSetCurrentModuleTask(IResponsiveTaskParams paramDict)
 
    _lastModule = newModule;
 }
-</pre>
+```
 
 The view model is also created and maintained inside a separate **Smart DI Container**.  This one is housed in the AppStateManager, which determines what view model matches a given set of run-time conditions:
 
-<pre lang='cs'>
+```csharp
 private async Task ChangeState<InterfaceT, ClassT>(string newState)
    where ClassT : class, InterfaceT
    where InterfaceT : class
@@ -76,6 +76,6 @@ private async Task ChangeState<InterfaceT, ClassT>(string newState)
    // Sets the new view and thena assigns the binding contest to the new view model.
    await SetCurrentModuleTask.RunAllTasksUsingDefaults(viewModel);
 }
-</pre>
+```
 
 
