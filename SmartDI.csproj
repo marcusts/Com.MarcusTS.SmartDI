@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-      <TargetFramework>netstandard2.1</TargetFramework>
+      <TargetFramework>netstandard2.0</TargetFramework>
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
       <PackageId>Com.MarcusTS.SmartDI</PackageId>
@@ -28,14 +28,15 @@
       <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>1.0.34</Version>
-      <AssemblyVersion>1.0.34.0</AssemblyVersion>
-      <FileVersion>1.0.34.0</FileVersion>
+      <Version>1.0.37</Version>
+      <AssemblyVersion>1.0.37.0</AssemblyVersion>
+      <FileVersion>1.0.37.0</FileVersion>
       <SignAssembly>false</SignAssembly>
       <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
       <DelaySign>false</DelaySign>
       <PackageReleaseNotes></PackageReleaseNotes>
       <PackageReadmeFile>README.md</PackageReadmeFile>
+      <GenerateDocumentationFile>False</GenerateDocumentationFile>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -62,7 +63,7 @@
    </ItemGroup>
 
    <ItemGroup>
-      <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.32" />
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.34" />
    </ItemGroup>
 
    <ItemGroup>
