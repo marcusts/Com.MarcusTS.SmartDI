@@ -1,3 +1,5 @@
+> ## NOW MAUI READY !!!
+
 # Finally, a DI Container Without The Fake "IOC" Swagger
 
 ### _It's just dependency injection - that's all, folks_
@@ -98,39 +100,37 @@ See the [unit tests](https://github.com/marcusts/SmartDI.MSTests).
 
 Please also refer to the [Quick Start Guide](https://github.com/marcusts/Com.MarcusTS.SmartDI/blob/master/docs/Quick_Start_Guide.md).
 
-## The Smart DI Container Is Open Source; Enjoy Our Other Offerings
+## The Smart DI Container Is Open Source; Enjoy Our Entire Public Suite 
 
-If you find value in this software, consider these other related projects:
-
-### *Shared Utils*
+### *Shared Utils (MAUI Ready!)*
 
 [GutHub](https://github.com/marcusts/Com.MarcusTS.SharedUtils)
 
 [NuGet](https://www.nuget.org/packages/Com.MarcusTS.SharedUtils)
 
-### *The Smart DI Container*
+### *The Smart DI Container (MAUI Ready!)*
 
 [GutHub](https://github.com/marcusts/Com.MarcusTS.SmartDI)
 
 [NuGet](https://www.nuget.org/packages/Com.MarcusTS.SmartDI)
 
-### *Shared Forms*
-
-[GutHub](https://github.com/marcusts/Com.MarcusTS.SharedForms)
-
-[NuGet](https://www.nuget.org/packages/Com.MarcusTS.SharedForms)
-
-### *Responsive Tasks*
+### *Responsive Tasks (MAUI Ready!)*
 
 [GutHub](https://github.com/marcusts/Com.MarcusTS.ResponsiveTasks)
 
 [NuGet](https://www.nuget.org/packages/Com.MarcusTS.ResponsiveTasks)
 
-### *Responsive Tasks - Xamarin.Forms Support*
+### *PlatformIndependentShared (MAUI Ready!)*
 
-[GutHub](https://github.com/marcusts/Com.MarcusTS.ResponsiveTasks.XamFormsSupport)
+[GutHub](https://github.com/marcusts/PlatformIndependentShared)
 
-[NuGet](https://www.nuget.org/packages/Com.MarcusTS.ResponsiveTasks.XamFormsSupport)
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.PlatformIndependentShared)
+
+### *UI.XamForms*
+
+[GutHub](https://github.com/marcusts/UI.XamForms)
+
+[NuGet](https://www.nuget.org/packages/Com.MarcusTS.UI.XamForms)
 
 ### *The Modern App Demo*
 

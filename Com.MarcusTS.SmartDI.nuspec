@@ -3,7 +3,7 @@
 <package>
    <metadata>
       <id>Com.MarcusTS.SmartDI</id>
-      <version>1.0.37</version>
+      <version>2.0.1</version>
       <title>Smart DI Container</title>
       <authors>Stephen Marcus</authors>
       <owners>Marcus Technical Services, Inc.</owners>
@@ -23,7 +23,7 @@
          * Supports simple register-and-resolve so types do not need to be registered in advance.
       </description>
       <copyright>Copyright 2021 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
-      <tags>ioc ioc-container di di-container object-lifecycle smart-di-container</tags>
+      <tags>ioc ioc-container di di-container object-lifecycle smart-di-container maui</tags>
       <readme>docs\README.md</readme>
    </metadata>
    <files>

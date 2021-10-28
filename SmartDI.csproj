@@ -25,12 +25,12 @@
       <PackageLicenseUrl></PackageLicenseUrl>
       <PackageProjectUrl></PackageProjectUrl>
       <RepositoryUrl></RepositoryUrl>
-      <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container</PackageTags>
+      <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container maui</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>1.0.37</Version>
-      <AssemblyVersion>1.0.37.0</AssemblyVersion>
-      <FileVersion>1.0.37.0</FileVersion>
+      <Version>2.0.1</Version>
+      <AssemblyVersion>2.0.1.0</AssemblyVersion>
+      <FileVersion>2.0.1.0</FileVersion>
       <SignAssembly>false</SignAssembly>
       <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
       <DelaySign>false</DelaySign>
@@ -55,6 +55,7 @@
       <Compile Remove="ResponsiveTasks.XamFormsSupport\**" />
       <EmbeddedResource Remove="ResponsiveTasks.XamFormsSupport\**" />
       <None Remove="ResponsiveTasks.XamFormsSupport\**" />
+      <None Include="Com.MarcusTS.SmartDI.sln" />
       <None Include="docs\README.md" Pack="true" PackagePath="\" />
    </ItemGroup>
 
@@ -63,7 +64,7 @@
    </ItemGroup>
 
    <ItemGroup>
-     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.34" />
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="2.0.1" />
    </ItemGroup>
 
    <ItemGroup>
