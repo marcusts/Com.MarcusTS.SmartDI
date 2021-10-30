@@ -28,9 +28,9 @@
       <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container maui</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>2.0.1</Version>
-      <AssemblyVersion>2.0.1.0</AssemblyVersion>
-      <FileVersion>2.0.1.0</FileVersion>
+      <Version>2.0.2</Version>
+      <AssemblyVersion>2.0.2.0</AssemblyVersion>
+      <FileVersion>2.0.2.0</FileVersion>
       <SignAssembly>false</SignAssembly>
       <AssemblyOriginatorKeyFile>GoDaddyCodeSigningKey201812241042.pfx</AssemblyOriginatorKeyFile>
       <DelaySign>false</DelaySign>
@@ -41,6 +41,7 @@
 
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
       <DefineConstants>DEBUG;TRACE</DefineConstants>
+      <PlatformTarget>x64</PlatformTarget>
       <Optimize>false</Optimize>
       <DocumentationFile>M:\MyDocs\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
    </PropertyGroup>
@@ -49,6 +50,7 @@
       <DefineConstants>DEBUG;TRACE</DefineConstants>
       <DocumentationFile>M:\MyDocs\Dev\MtsShared\SmartDI\Com.MarcusTS.SmartDI.xml</DocumentationFile>
       <PlatformTarget>x64</PlatformTarget>
+      <Optimize>false</Optimize>
    </PropertyGroup>
 
    <ItemGroup>
@@ -64,7 +66,7 @@
    </ItemGroup>
 
    <ItemGroup>
-     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="2.0.1" />
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="2.0.2" />
    </ItemGroup>
 
    <ItemGroup>
