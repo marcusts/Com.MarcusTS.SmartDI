@@ -28,7 +28,7 @@
       <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container maui</PackageTags>
       <AssemblyName>Com.MarcusTS.SmartDI</AssemblyName>
       <RootNamespace>Com.MarcusTS.SmartDI</RootNamespace>
-      <Version>2.0.2</Version>
+      <Version>2.0.5</Version>
       <AssemblyVersion>2.0.2.0</AssemblyVersion>
       <FileVersion>2.0.2.0</FileVersion>
       <SignAssembly>false</SignAssembly>
@@ -66,7 +66,7 @@
    </ItemGroup>
 
    <ItemGroup>
-     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="2.0.2" />
+     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="2.0.5" />
    </ItemGroup>
 
    <ItemGroup>
